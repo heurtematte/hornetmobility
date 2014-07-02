@@ -1,0 +1,1 @@
+YUI.add("lang/hornet-filtre",function(a){a.Intl.add("hornet-filtre","",{hide:"Cacher le filtrage",hideActive:"Cacher le filtre en cours",show:"Afficher le filtrage",showActive:"Afficher le filtre en cours"});},"3.3.0");

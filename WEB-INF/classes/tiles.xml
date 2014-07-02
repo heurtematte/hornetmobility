@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    <definition name="baseLayout" template="/WEB-INF/tiles-jsp/layout/baseLayout.jsp">
+        <put-attribute name="filArianeKey" value="" />
+        <put-attribute name="pageErreur" value="false" />
+        <put-attribute name="hornetConfig" value="/WEB-INF/tiles-jsp/layout/hornetConfig.jsp" />
+        <put-attribute name="topheader" value="/WEB-INF/tiles-jsp/frameset/internet/tophd.jsp" /> 
+        <put-attribute name="header" value="header" />
+        <put-attribute name="menu" value="nav" />
+        <put-attribute name="filariane" value="filarianeDyn" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="footer" value="/WEB-INF/tiles-jsp/frameset/internet/ft.jsp" />
+        <put-list-attribute name="yuiCssItems">
+            <add-attribute value="/cssreset/reset-min.css" />
+            <add-attribute value="/cssbase/base-min.css" />
+            <add-attribute value="/cssfonts/fonts-min.css" />
+            <add-attribute value="/cssgrids/grids-min.css" />
+        </put-list-attribute>
+        <put-list-attribute name="appCssItems">
+            <add-attribute value="/static-1.2.0/css/global.css" />
+        </put-list-attribute>
+        <put-list-attribute name="rwdCssItems">
+            <add-attribute value="/static-1.2.0/css/hornetthemeinternet_new.css" />
+            <add-attribute value="/static-1.2.0/css/cssgrids-responsive-base.css" />
+            <add-attribute value="/static-1.2.0/css/hornet-responsive.css" />
+            <add-attribute value="/static-1.2.0/css/hornet-responsive-desk.css" />
+            <add-attribute value="/static-1.2.0/css/hornet-responsive-tab.css" />
+            <add-attribute value="/static-1.2.0/css/hornet-responsive-phone.css" />
+        </put-list-attribute>
+        <put-list-attribute name="rwdCssItemsExt">
+        </put-list-attribute>
+    </definition>
+    
+    <definition name="header"  template="/WEB-INF/tiles-jsp/frameset/internet/hd.jsp">
+        <put-attribute name="a11y" value="/WEB-INF/tiles-jsp/frameset/a11y.jsp" />
+    </definition>      
+    <definition name="nav" preparer="fr.gouv.diplomatie.applitutoriel.web.action.frameset.MenuViewPreparer" template="/WEB-INF/tiles-jsp/frameset/nav.jsp" />
+    <definition name="filarianeDyn" preparer="fr.gouv.diplomatie.applitutoriel.web.action.frameset.MenuViewPreparer" template="/WEB-INF/tiles-jsp/frameset/filariane.jsp" />
+
+    <definition name="actionError" extends="baseLayout">
+        <put-attribute name="filArianeKey" value="erreur" />
+        <put-attribute name="pageErreur" value="true" />
+        <put-attribute name="content" value="/WEB-INF/tiles-jsp/frameset/erreur.jsp" />
+    </definition>
+
+    <definition name="accessibilite" extends="baseLayout">
+        <put-attribute name="filArianeKey" value="menu.accessibilite" />
+        <put-attribute name="content" value="/WEB-INF/tiles-jsp/accessibilite.jsp" />
+    </definition>
+
+    <definition name="aide" extends="baseLayout">
+        <put-attribute name="filArianeKey" value="menu.aide" />
+        <put-attribute name="content" value="/WEB-INF/tiles-jsp/aide.jsp" />
+    </definition>
+
+    <definition name="planSite" extends="baseLayout">
+        <put-attribute name="filArianeKey" value="menu.planSite" />
+        <put-attribute name="content" value="planSite.deftiles"/>
+    </definition>
+    <definition name="planSite.deftiles" preparer="fr.gouv.diplomatie.applitutoriel.web.action.frameset.MenuViewPreparer" template="/WEB-INF/tiles-jsp/plan_site.jsp">
+    </definition>
+
+    <definition name="accueil" extends="baseLayout">
+        <put-attribute name="filariane" value="" />
+        <put-attribute name="filArianeKey" value="menu.accueil" />
+        <put-attribute name="content" value="/WEB-INF/tiles-jsp/accueil.jsp" />
+    </definition>
+
+    <!-- RECHERCHE PARTENAIRE -->
+    <definition name="recherchePartenaire" extends="baseLayout">
+        <put-attribute name="filArianeKey" value="menu.partenaires.liste" />
+        <put-attribute name="content" value="/WEB-INF/tiles-jsp/partenaire/recherchePartenaire.jsp" />
+		<put-list-attribute name="rwdCssItemsExt">
+			<add-attribute value="/static-1.2.0/css/recherchePartenaire.css" />
+		</put-list-attribute>
+    </definition>
+
+    <definition name="recherchePartenaireError" extends="recherchePartenaire">
+        <put-attribute name="pageErreur" value="true" />
+    </definition>
+
+
+    <!-- FICHE PARTENAIRE -->
+    <definition name="fichePartenaire.deftiles" template="/WEB-INF/tiles-jsp/partenaire/fiche/ongletsFichePartenaire.jsp">
+        <put-attribute name="onglet" value="0" />
+        <put-list-attribute name="ongletsKey">
+            <add-attribute value="identite" />
+            <add-attribute value="produit" />
+        </put-list-attribute>
+        <put-list-attribute name="ongletsPagelet">
+            <add-attribute value="/WEB-INF/tiles-jsp/partenaire/fiche/ongletIdentite-consultation.jsp" />
+            <add-attribute value="/WEB-INF/tiles-jsp/partenaire/fiche/ongletProduit.jsp" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="fichePartenaire" extends="baseLayout">
+        <put-attribute name="filArianeKey" value="menu.partenaires.fichePartenaire" />
+        <put-attribute name="content" value="fichePartenaire.deftiles" />
+    </definition>
+
+    <definition name="fichePartenaireError" extends="fichePartenaire">
+        <put-attribute name="pageErreur" value="true" />
+    </definition>
+
+    <definition name="editionIdentitePartenaire.content" template="/WEB-INF/tiles-jsp/partenaire/fiche/ongletIdentite-edition.jsp">
+        <put-attribute name="reloadActionName" value="reloadEditionPartenaire" />
+        <put-attribute name="action" value="Edition" />
+    </definition>
+
+    <definition name="ficheEditionPartenaire.deftiles" template="/WEB-INF/tiles-jsp/partenaire/fiche/ongletsFichePartenaireEdition.jsp">
+        <put-attribute name="actionName" value="edition" />
+        <put-attribute name="onglet" value="0" />
+        <put-list-attribute name="ongletsKey">
+            <add-attribute value="identite" />
+            <add-attribute value="produit" />
+        </put-list-attribute>
+        <put-list-attribute name="ongletsPagelet">
+            <add-attribute value="editionIdentitePartenaire.content" />
+            <add-attribute value="/WEB-INF/tiles-jsp/partenaire/fiche/ongletProduit-edition.jsp" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="ficheEditionPartenaire" extends="baseLayout">
+        <put-attribute name="filArianeKey" value="menu.partenaires.editionPartenaire" />
+        <put-attribute name="content" value="ficheEditionPartenaire.deftiles" />
+    </definition>
+
+    <definition name="ficheEditionPartenaireError" extends="ficheEditionPartenaire">
+        <put-attribute name="pageErreur" value="true" />
+    </definition>
+
+
+    <definition name="ficheEditionProduitsPartenaire.deftiles" extends="ficheEditionPartenaire.deftiles">
+        <put-attribute name="onglet" value="1" />
+    </definition>
+
+    <definition name="ficheEditionProduitsPartenaire" extends="ficheEditionPartenaire">
+        <put-attribute name="content" value="ficheEditionProduitsPartenaire.deftiles" />
+    </definition>
+
+
+    <definition name="ajoutIdentitePartenaire.content"
+        template="/WEB-INF/tiles-jsp/partenaire/fiche/ongletIdentite-edition.jsp">
+        <put-attribute name="reloadActionName" value="reloadAjoutPartenaire" />
+        <put-attribute name="action" value="Ajout" />
+    </definition>
+
+    <definition name="ficheAjoutPartenaire.deftiles" template="/WEB-INF/tiles-jsp/partenaire/fiche/ongletsFichePartenaireEdition.jsp">
+        <put-attribute name="actionName" value="ajout" />
+        <put-attribute name="onglet" value="0" />
+        <put-list-attribute name="ongletsKey">
+            <add-attribute value="identite" />
+        </put-list-attribute>
+        <put-list-attribute name="ongletsPagelet">
+            <add-attribute value="ajoutIdentitePartenaire.content" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="ficheAjoutPartenaire" extends="baseLayout">
+        <put-attribute name="filArianeKey" value="menu.partenaires.ajoutPartenaire" />
+        <put-attribute name="content" value="ficheAjoutPartenaire.deftiles" />
+    </definition>
+
+    <definition name="ficheAjoutPartenaireError" extends="ficheAjoutPartenaire">
+        <put-attribute name="pageErreur" value="true" />
+    </definition>
+
+    <!-- ARBORESCENCE PARTENAIRE -->
+    <definition name="arborescencePartenaire" extends="baseLayout">
+        <put-attribute name="filArianeKey" value="menu.partenaires.arborescence" />
+        <put-attribute name="content" value="/WEB-INF/tiles-jsp/partenaire/arborescencePartenaire.jsp" />
+    </definition>
+
+
+    <!-- ADMINISTRATION -->
+    <definition name="listeSecteursEdit" extends="baseLayout">
+        <put-attribute name="filArianeKey" value="menu.administration.secteurs.liste" />
+        <put-attribute name="content" value="listeSecteurs.content" />
+		<put-list-attribute name="rwdCssItemsExt">
+			<add-attribute value="/static-1.2.0/css/listeSecteurs.css" />
+		</put-list-attribute>
+    </definition>
+
+    <definition name="listeSecteurs.content" template="/WEB-INF/tiles-jsp/administration/secteur/listeSecteurs.jsp">
+        <put-attribute name="form" value="formSecteur.content"/>
+        <put-attribute name="form_title" value="Edition du secteur"/>
+    </definition>
+
+    <definition name="formSecteur.content"
+        template="/WEB-INF/tiles-jsp/administration/secteur/formSecteur.jsp">
+        <put-attribute name="titre"></put-attribute>
+        <put-attribute name="actionName" value="ajout" />
+    </definition>
+
+    <definition name="ajoutSecteur" extends="baseLayout">
+        <put-attribute name="filArianeKey" value="menu.administration.secteurs.ajoutSecteur" />
+        <put-attribute name="content" value="ajoutSecteur.content" />
+    </definition>
+
+    <definition name="ajoutSecteur.content"
+        template="/WEB-INF/tiles-jsp/administration/secteur/formSecteur.jsp">
+        <put-attribute name="titre" value="Ajouter un secteur" />
+        <put-attribute name="actionName" value="ajout" />
+    </definition>
+
+    <definition name="editionSecteur" extends="baseLayout">
+        <put-attribute name="filArianeKey" value="menu.administration.secteurs.editionSecteur" />
+        <put-attribute name="content" value="editionSecteur.content" />
+    </definition>
+
+    <definition name="editionSecteur.content"
+        template="/WEB-INF/tiles-jsp/administration/secteur/formSecteur.jsp">
+        <put-attribute name="titre" value="Modifier un secteur" />
+        <put-attribute name="actionName" value="edition" />
+    </definition>
+    
+    
+    <!-- Contact -->
+    <definition name="contact" extends="baseLayout">
+        <put-attribute name="filArianeKey" value="menu.contact" />
+        <put-attribute name="content" value="/WEB-INF/tiles-jsp/contact/contact.jsp" />
+    </definition>
+    <definition name="contactError" extends="contact">
+        <put-attribute name="pageErreur" value="true" />
+    </definition>
+    
+    <!-- Authentification  -->
+    <definition name="login" template="/authentification/login.jsp">
+    </definition>
+
+</tiles-definitions>

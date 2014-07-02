@@ -1,0 +1,28 @@
+
+.yui3-skin-sam .yui3-filtre-button-show-hidden:after {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid;
+    bottom: -10px;
+    content: "";
+    float: right;
+    height: 0;
+    position: relative;
+    right: -3px;
+    width: 0;
+}
+.yui3-skin-sam .yui3-filtre-button-show-visible:after {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid;
+    bottom: -2px;
+    content: "";
+    float: right;
+    height: 0;
+    position: relative;
+    right: -3px;
+    width: 0;
+}
+.yui3-skin-sam .yui3-filtre-button-show-active {
+    background-color: #85CE7A !important;
+}

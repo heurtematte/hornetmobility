@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="pays">
+
+    <resultMap class="fr.gouv.diplomatie.applitutoriel.business.bo.Pays" id="mapPays">
+        <result column="ID_PAYS" property="id" />
+        <result column="PAY_LIBELLE" property="libelle" />
+        <result column="PAY_NATIONALITE" property="nationalite" />
+    </resultMap>
+    
+    <resultMap class="fr.gouv.diplomatie.applitutoriel.business.bo.Pays" id="mapPaysPartenaireNationalite">
+        <result column="idNationalite" property="id" />
+        <result column="libelleNationalite" property="nationalite" />
+    </resultMap>
+
+    <sql id="select_fragment">
+        SELECT ID_PAYS, PAY_LIBELLE, PAY_NATIONALITE
+        FROM PAYS 
+    </sql>
+
+    <sql id="orderByPaysLibelle_fragment">
+        ORDER BY PAY_LIBELLE ASC;
+    </sql>
+
+    <sql id="orderByPaysNationnalite_fragment">
+        ORDER BY PAY_NATIONALITE ASC;
+    </sql>
+
+    <select id="select" resultMap="mapPays">
+        <include refid="select_fragment" />
+        <include refid="orderByPaysLibelle_fragment" />
+    </select>
+    
+    <select id="selectNationalite" resultMap="mapPays">
+        <include refid="select_fragment" />
+        <include refid="orderByPaysNationnalite_fragment" />
+    </select>
+    
+    <select id="selectNationaliteByCriteres" resultMap="mapPays">
+        <include refid="select_fragment" />
+        <dynamic prepend="WHERE">
+            <isNotEmpty property="nationalite" prepend="AND">
+            UPPER(PAY_NATIONALITE) LIKE UPPER('%'+#nationalite#+'%')
+            </isNotEmpty>
+        </dynamic>
+        <include refid="orderByPaysNationnalite_fragment" />
+    </select>
+</sqlMap>

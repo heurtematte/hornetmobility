@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!--
+        Configuration de Spring, specialement pour les couches DAO : 
+        - precise la configuration iBatis, 
+        - precise le mode de connexion utilise
+        - et indique a Spring s'il doit utiliser le mode "transaction par annotation"
+    -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd">
+
+	<bean id="jdbcPropertyConfigurer"
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:jdbc.properties" />
+        <property name="placeholderPrefix" value="$jdbc{" />
+    </bean>
+    
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="$jdbc{jdbc.driver}" />
+        <property name="url" value="$jdbc{jdbc.url}" />
+        <property name="username" value="$jdbc{jdbc.username}"/>
+        <property name="password" value="$jdbc{jdbc.password}"/>
+    </bean>
+    
+    <!-- Initialisation de la base de données -->
+    <jdbc:initialize-database data-source="dataSource">
+		<jdbc:script location="classpath:createTables.sql" />
+		<jdbc:script location="classpath:initData.sql" />
+    </jdbc:initialize-database>
+    
+    <bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+        <property name="configLocation">
+            <value>classpath:ibatis.xml</value>
+        </property>
+        <property name="useTransactionAwareDataSource">
+            <value>true</value>
+        </property>
+    </bean>
+</beans>

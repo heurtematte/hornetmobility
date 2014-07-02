@@ -1,0 +1,2577 @@
+.yui3-gallery-fwt-treeview ul {
+	list-style: none;
+    cursor:pointer ;
+}
+.yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-content {
+	clear: both;
+	overflow: hidden;
+    display: inline-block;
+}
+.yui3-gallery-fwt-treeview li .yui3-fw-treeview-label,
+.yui3-gallery-fwt-treeview li .yui3-fw-treeview-toggle,
+.yui3-gallery-fwt-treeview li .yui3-fw-treeview-selection,
+.yui3-gallery-fwt-treeview li .yui3-fw-treeview-icon {
+	float: left;
+}
+.yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-collapsed .yui3-flyweight-tree-node-children {
+	display: none;
+}
+.yui3-js-enabled .yui3-arborescence-loading {
+    display: none;
+}
+.hornet-skin-francediplo .yui3-flyweight-tree-node-children {
+    margin: 0;
+}
+
+
+.hornet-skin-francediplo .yui3-gallery-fwt-treeview ul {
+	padding-left: 18px;
+}
+.hornet-skin-francediplo .yui3-gallery-fwt-treeview > ul {
+	background: none;
+	padding-left: 0;
+}
+.hornet-skin-francediplo .yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-loading .yui3-fw-treeview-toggle {
+	background: url(assets/treeview-loading.gif) 0 0 no-repeat;
+}
+.hornet-skin-francediplo .yui3-gallery-fwt-treeview li {
+    background: url(assets/treeview-sprite.png) -336px 0 repeat-y;
+}
+.hornet-skin-francediplo .yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-last-child {
+	background: none;
+}
+.hornet-skin-francediplo .yui3-gallery-fwt-treeview li .yui3-fw-treeview-toggle {
+	width:18px; height:22px;
+	float: left;
+}
+.hornet-skin-francediplo .yui3-gallery-fwt-treeview .yui3-fw-treeview-toggle {
+    background: url(assets/treeview-sprite.png) 0 0 repeat-y;
+
+}
+.hornet-skin-francediplo .yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-content:focus {
+    background-color: #f8f8f8;
+}
+.hornet-skin-francediplo .yui3-gallery-fwt-treeview .yui3-fw-treeview-label {
+    padding: 0 2px;
+}
+
+
+.hornet-skin-francediplo  .yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-no-children > div >  .yui3-fw-treeview-toggle {
+    background-position: -18px -4px;
+    background-repeat: no-repeat;
+}
+.hornet-skin-francediplo  .yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-no-children.yui3-flyweight-tree-node-last-child  > div > .yui3-fw-treeview-toggle {
+    background-position: -36px -4px;
+    background-repeat: no-repeat;
+}
+.hornet-skin-francediplo  .yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-expanded > div > .yui3-fw-treeview-toggle {
+    background-position: -54px -4px;
+    background-repeat: no-repeat;
+}
+.hornet-skin-francediplo  .yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-expanded  > div > .yui3-fw-treeview-toggle:hover {
+    background-position: -72px -4px;
+    background-repeat: no-repeat;
+}
+.hornet-skin-francediplo  .yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-expanded.yui3-flyweight-tree-node-last-child  > div > .yui3-fw-treeview-toggle {
+    background-position: -90px -4px;
+    background-repeat: no-repeat;
+}
+
+.hornet-skin-francediplo  .yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-expanded.yui3-flyweight-tree-node-last-child  > div > .yui3-fw-treeview-toggle:hover {
+    background-position: -108px -4px;
+    background-repeat: no-repeat;
+}
+
+.hornet-skin-francediplo  .yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-collapsed > div > .yui3-fw-treeview-toggle {
+    background-position: -126px -4px;
+    background-repeat: no-repeat;
+}
+.hornet-skin-francediplo  .yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-collapsed  > div > .yui3-fw-treeview-toggle:hover {
+    background-position: -144px -4px;
+    background-repeat: no-repeat;
+}
+.hornet-skin-francediplo  .yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-collapsed.yui3-flyweight-tree-node-last-child  > div > .yui3-fw-treeview-toggle {
+    background-position: -162px -4px;
+    background-repeat: no-repeat;
+}
+.hornet-skin-francediplo  .yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-collapsed.yui3-flyweight-tree-node-last-child  > div > .yui3-fw-treeview-toggle:hover {
+    background-position: -180px -4px;
+    background-repeat: no-repeat;
+}
+.hornet-skin-francediplo  .yui3-gallery-fwt-treeview .yui3-fw-treeview-selection {
+	display:none;
+}
+.hornet-skin-francediplo  .yui3-fw-treeview-checkbox .yui3-gallery-fwt-treeview ul {
+	padding-left: 30px;
+}
+.hornet-skin-francediplo  .yui3-fw-treeview-checkbox .yui3-gallery-fwt-treeview .yui3-fw-treeview-selection {
+	width: 16px;
+	height:22px;
+	background: url(assets/treeview-sprite.png) 0 0 no-repeat;
+	display:block;
+}
+.hornet-skin-francediplo  .yui3-fw-treeview-checkbox .yui3-gallery-fwt-treeview .yui3-fw-treeview-selected-state-0 > div > .yui3-fw-treeview-selection {
+	background-position: -270px -4px;
+    background-repeat: no-repeat;
+}
+.hornet-skin-francediplo  .yui3-fw-treeview-checkbox .yui3-gallery-fwt-treeview .yui3-fw-treeview-selected-state-1 > div > .yui3-fw-treeview-selection {
+	background-position: -302px -4px;
+    background-repeat: no-repeat;
+}
+.hornet-skin-francediplo  .yui3-fw-treeview-checkbox .yui3-gallery-fwt-treeview .yui3-fw-treeview-selected-state-2 > div > .yui3-fw-treeview-selection {
+	background-position: -286px -4px;
+    background-repeat: no-repeat;
+}
+.hornet-skin-francediplo  .yui3-fw-treeview-checkbox .yui3-gallery-fwt-treeview .yui3-fw-treeview-selected-state-null > div > .yui3-fw-treeview-selection {
+	background-position: -318px -4px;
+    background-repeat: no-repeat;
+}
+/* YUI 3.8.1 (build 5795) Copyright 2013 Yahoo! Inc. http://yuilibrary.com/license/ */
+.yui3-hornetautocomplete {
+    position: absolute;
+    z-index: 1;
+}
+
+.yui3-hornetautocomplete-hidden { visibility: hidden; }
+
+.yui3-hornetautocomplete-aria {
+    /* Hide from sighted users, show to screen readers. */
+    left: -9999px;
+    position: absolute;
+}
+
+.yui3-hornetautocomplete-list {
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.yui3-hornetautocomplete-item {
+    cursor: pointer;
+    list-style: none;
+    padding: 2px 5px;
+}
+
+.yui3-hornetautocomplete-item-active { outline: #afafaf dotted thin; }
+.hornet-skin-francediplo .yui3-hornetautocomplete-content {
+    background: #fff;
+    border: 1px solid #afafaf;
+    -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.58);
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.58);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.58);
+}
+
+.hornet-skin-francediplo .yui3-hornetautocomplete-item-hover {
+    background: #bfdaff;
+}
+
+.hornet-skin-francediplo .yui3-hornetautocomplete-item-active {
+    background: #2647a0;
+    color: #fff;
+    outline: none;
+}
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
+.yui-button  {
+
+    display: -moz-inline-box; /* Gecko */
+    display: inline-block; /* IE, Opera and Safari */
+    vertical-align: text-bottom;
+    
+}
+
+.yui-button .first-child {
+
+    display: block;
+    *display: inline-block; /* IE */
+
+}
+
+.yui-button button,
+.yui-button a {
+
+    display: block;
+    *display: inline-block; /* IE */
+    border: none;
+    margin: 0;
+
+}
+
+.yui-button button {
+
+    background-color: transparent;
+    *overflow: visible; /* Remove superfluous padding for IE */
+    cursor: pointer;
+
+}
+
+.yui-button a {
+
+    text-decoration: none;
+
+}
+
+.hornet-skin-francediplo .yui-button  {
+    border-color: 0;
+    background: #000;
+    font-weight: normal;
+    margin: auto .25em;
+}
+
+.hornet-skin-francediplo .yui-button .first-child {
+    margin: 0 -1px;
+    /*
+        Using negative margins for rounded corners won't work in IE 6 and IE 7 
+        (Quirks Mode Only), so set the "margin" property to "0" for those 
+        browsers.
+    */
+    _margin: 0;
+}
+
+.hornet-skin-francediplo .yui-button button,
+.hornet-skin-francediplo .yui-button a,
+.hornet-skin-francediplo .yui-button a:visited {
+    font-weight: normal;
+    padding: 2px 12px;
+    font-size: 100%;  /* 12px */
+    line-height: 2;  /* ~24px */
+    *line-height: 1.7; /* For IE */
+    min-height: 2em; /* For Gecko */
+    *min-height: auto; /* For IE */
+    color: #fff; 
+
+}
+
+.hornet-skin-francediplo .yui-button a {
+
+    /*
+        Necessary to get Buttons of type "link" to be the correct 
+        height in IE.
+    */
+    *line-height: 1.875;
+    *padding-bottom: 1px;
+
+}
+
+@-moz-document url-prefix() {
+.hornet-skin-francediplo .yui-button a {
+
+    /*
+        Necessary to get Buttons of type "link" to be the correct 
+        height in Gecko.
+    */
+    border-bottom: 2px solid transparent;
+}
+}
+
+.hornet-skin-francediplo .yui-split-button button,
+.hornet-skin-francediplo .yui-menu-button button {
+
+    padding-right: 20px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    
+}
+
+.hornet-skin-francediplo .yui-menu-button button {
+
+    background-image: url(assets/yui_menu-button-arrow.png);
+
+}
+
+.hornet-skin-francediplo .yui-split-button button {
+
+    background-image: url(assets/yui_split-button-arrow.png);
+
+}
+
+
+/* Focus state */
+
+
+.hornet-skin-francediplo .yui-button-focus {
+    outline: 0;
+    border-color: #000;
+    background: #000;
+}
+
+.hornet-skin-francediplo .yui-button-focus * {
+    outline: 0;
+    text-decoration: underline;
+}
+
+.hornet-skin-francediplo .yui-split-button-focus button {
+    outline: 0;
+    background-image: url(assets/yui_split-button-arrow-focus.png);
+
+}
+
+
+/* Hover state */
+
+.hornet-skin-francediplo .yui-button-hover,
+.hornet-skin-francediplo .yui-button:hover {
+    background: #4066AA;
+}
+
+.hornet-skin-francediplo .yui-split-button-hover button {
+    background-image: url(assets/yui_split-button-arrow-hover.png);
+}
+
+
+/* Active state */
+
+.hornet-skin-francediplo .yui-button-active {    
+    border-color: #4066AA;    
+}
+
+
+.hornet-skin-francediplo .yui-split-button-activeoption {
+
+    border-color: #808080;
+    background-position: 0 0;
+
+}
+
+.hornet-skin-francediplo .yui-split-button-activeoption .first-child {
+
+    border-color: #808080;
+
+}
+
+.hornet-skin-francediplo .yui-split-button-activeoption button {
+
+    background-image: url(assets/yui_split-button-arrow-active.png);
+
+}
+
+
+/* Checked state */
+
+.hornet-skin-francediplo .yui-radio-button-checked,
+.hornet-skin-francediplo .yui-checkbox-button-checked {
+    
+    border-color: #304369;
+    background-position: 0 -1400px;
+    
+}
+
+.hornet-skin-francediplo .yui-radio-button-checked .first-child,
+.hornet-skin-francediplo .yui-checkbox-button-checked .first-child {
+
+    border-color: #304369;
+
+}
+
+.hornet-skin-francediplo .yui-radio-button-checked button,
+.hornet-skin-francediplo .yui-checkbox-button-checked button { 
+
+    color: #fff;
+
+}
+
+
+/* Disabled state */
+
+.hornet-skin-francediplo .yui-button-disabled {
+    
+    border-color: #ccc;
+    background-position: 0 -1500px;
+    
+}
+
+.hornet-skin-francediplo .yui-button-disabled .first-child {
+
+    border-color: #ccc;
+
+}
+
+.hornet-skin-francediplo .yui-button-disabled button, 
+.hornet-skin-francediplo .yui-button-disabled a,
+.hornet-skin-francediplo .yui-button-disabled a:visited {
+
+    color: #A6A6A6;
+    cursor: default;
+
+}
+
+.hornet-skin-francediplo .yui-menu-button-disabled button {
+
+    background-image: url(assets/yui_menu-button-arrow-disabled.png);
+    
+}
+
+.hornet-skin-francediplo .yui-split-button-disabled button {
+
+    background-image: url(assets/yui_split-button-arrow-disabled.png);
+    
+}
+/* BOUTON */
+.hornet-skin-francediplo .button-group {
+    text-align: center;
+    margin: 0.5em 0;
+}
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
+/**
+ * CORE
+ *
+ * This is the set of CSS rules required by Calendar to drive core functionality and structure.
+ * Changes to these rules may result in the Calendar not functioning or rendering correctly.
+ *
+ * They should not be modified for skinning.
+ **/
+ 
+/* CALENDAR BOUNDING BOX */
+.yui-calcontainer {
+	position:relative;
+	float:left;
+	_overflow:hidden; /* IE6 only, to clip iframe shim */
+}
+
+/* IFRAME SHIM */
+.yui-calcontainer iframe {
+	position:absolute;
+	border:none;
+	margin:0;padding:0;
+	z-index:0;
+	width:100%;
+	height:100%;
+	left:0px;
+	top:0px;
+}
+
+/* IFRAME SHIM IE6 only */
+.yui-calcontainer iframe.fixedsize {
+	width:50em;
+	height:50em;
+	top:-1px;
+	left:-1px;
+}
+
+/* BOUNDING BOX FOR EACH CALENDAR GROUP PAGE */
+.yui-calcontainer.multi .groupcal {
+	z-index:1;
+	float:left;
+	position:relative;
+}
+
+/* TITLE BAR */
+.yui-calcontainer .title {
+	position:relative;
+	z-index:1;
+}
+
+/* CLOSE ICON CONTAINER */
+.yui-calcontainer .close-icon {
+	position:absolute;
+	z-index:1;
+	text-indent:-10000em;
+	overflow:hidden;
+}
+
+/* CALENDAR TABLE */
+.yui-calendar {
+	position:relative;
+}
+
+/* NAVBAR LEFT ARROW CONTAINER */
+.yui-calendar .calnavleft {
+	position:absolute;
+	z-index:1;
+	text-indent:-10000em;
+	overflow:hidden;
+}
+
+/* NAVBAR RIGHT ARROW CONTAINER */
+.yui-calendar .calnavright {
+	position:absolute;
+	z-index:1;
+	text-indent:-10000em;
+	overflow:hidden;
+}
+
+/* NAVBAR TEXT CONTAINER */
+.yui-calendar .calheader {
+	position:relative;
+	width:100%;
+	text-align:center;
+}
+
+/* CalendarNavigator */
+.yui-calcontainer .yui-cal-nav-mask {
+	position:absolute;
+	z-index:2;
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+	_width:0;    /* IE6, IE7 quirks - width/height set programmatically to match container */
+	_height:0;
+	left:0;
+	top:0;
+	display:none;
+}
+
+/* NAVIGATOR BOUNDING BOX */
+.yui-calcontainer .yui-cal-nav {
+	position:absolute;
+	z-index:3;
+	top:0;
+	display:none;
+}
+
+/* NAVIGATOR BUTTONS (based on button-core.css) */
+.yui-calcontainer .yui-cal-nav .yui-cal-nav-btn  {
+	display: -moz-inline-box; /* Gecko */
+	display: inline-block; /* IE, Opera and Safari */
+}
+
+.yui-calcontainer .yui-cal-nav .yui-cal-nav-btn button {
+	display: block;
+	*display: inline-block; /* IE */
+	*overflow: visible; /* Remove superfluous padding for IE */
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+/* Specific changes for calendar running under fonts/reset */
+.yui-calendar .calbody a:hover {background:inherit;}
+p#clear {clear:left; padding-top:10px;}
+/*
+
+/* CALENDAR BOUNDING BOX */
+.hornet-skin-francediplo .yui-calcontainer {
+	background-color:#F4F2F1;
+	border:1px solid #808080;
+	padding:13px;
+}
+
+/* CALENDARGROUP BOUNDING BOX */
+.hornet-skin-francediplo .yui-calcontainer.multi {
+	padding:0 5px 0 5px;
+}
+
+/* BOUNDING BOX FOR EACH CALENDAR GROUP PAGE */
+.hornet-skin-francediplo .yui-calcontainer.multi .groupcal {
+	background-color:transparent;
+	border:none;
+	padding:10px 5px 10px 5px;
+	margin:0;
+}
+
+/* TITLE BAR */
+.hornet-skin-francediplo .yui-calcontainer .title {
+	background:url(assets/yui_sprite.png) repeat-x 0 0;
+	border-bottom:1px solid #cccccc;
+	font:100% sans-serif;
+	color:#000;
+	font-weight:bold;
+	height:auto;
+	padding:.4em;
+	margin:0 -10px 10px -10px;
+	top:0;
+	left:0;
+	text-align:left;
+}
+
+.hornet-skin-francediplo .yui-calcontainer.multi .title {
+	margin:0 -5px 0 -5px;
+}
+
+.hornet-skin-francediplo .yui-calcontainer.withtitle {
+	padding-top:0;
+}
+
+/* CLOSE BUTTON */
+.hornet-skin-francediplo .yui-calcontainer .calclose {
+	background:url(assets/yui_sprite.png) no-repeat 0 -300px;
+	width:25px;
+	height:15px;
+	top:.4em;
+	right:.4em;
+	cursor:pointer;
+}
+
+/* CALENDAR TABLE */
+.hornet-skin-francediplo .yui-calendar {
+	border-spacing:0;
+	border-collapse:collapse;
+	font:100% sans-serif;
+	text-align:center;
+	margin:0;
+}
+
+/* NAVBAR BOUNDING BOX */
+.hornet-skin-francediplo .yui-calendar .calhead {
+	background:transparent;
+	border:none;
+	vertical-align:middle;
+	padding:0;
+}
+
+/* NAVBAR TEXT CONTAINER */
+.hornet-skin-francediplo .yui-calendar .calheader {
+	background:transparent;
+	font-weight:bold;
+	padding:0 0 .6em 0;
+	text-align:center;
+}
+
+.hornet-skin-francediplo .yui-calendar .calheader img {
+	border:none;
+}
+
+/* NAVBAR LEFT ARROW */
+.hornet-skin-francediplo .yui-calendar .calnavleft {
+	background:url(assets/yui_sprite.png) no-repeat 0 -450px;
+	width:25px;
+	height:15px;
+	top:0;
+	bottom:0;
+	left:-10px;
+	margin-left:.4em;
+	cursor:pointer;
+}
+
+/* NAVBAR RIGHT ARROW */
+.hornet-skin-francediplo .yui-calendar .calnavright {
+	background:url(assets/yui_sprite.png) no-repeat 0 -500px;
+	width:25px;
+	height:15px;
+	top:0;
+	bottom:0;
+	right:-10px;
+	margin-right:.4em;
+	cursor:pointer;
+}
+
+/* WEEKDAY HEADER ROW */
+.hornet-skin-francediplo .yui-calendar .calweekdayrow {
+	height:2em;
+}
+
+.hornet-skin-francediplo .yui-calendar .calweekdayrow th {
+	padding:0;
+	border:none;
+}
+
+/* WEEKDAY (Su, Mo, Tu...) HEADER CELLS */
+.hornet-skin-francediplo .yui-calendar .calweekdaycell {
+	color:#000;
+	font-weight:bold;
+	text-align:center;
+	width:2em;
+}
+
+/* CALENDAR FOOTER. NOT IMPLEMENTED BY DEFAULT */
+.hornet-skin-francediplo .yui-calendar .calfoot {
+	background-color:#F4F2F1;
+}
+
+/* WEEK NUMBERS (ROW HEADERS/FOOTERS) */
+.hornet-skin-francediplo .yui-calendar .calrowhead, .hornet-skin-francediplo .yui-calendar .calrowfoot {
+	color:#a6a6a6;
+	font-size:85%;
+	font-style:normal;
+	font-weight:normal;
+	border:none;
+}
+
+.hornet-skin-francediplo .yui-calendar .calrowhead {
+	text-align:right;
+	padding:0 2px 0 0;
+}
+
+.hornet-skin-francediplo .yui-calendar .calrowfoot {
+	text-align:left;
+	padding:0 0 0 2px;
+}
+
+/* NORMAL CELLS */
+.hornet-skin-francediplo .yui-calendar td.calcell {
+	border:1px solid #cccccc;
+	background:#fff;
+	padding:1px;
+	height:1.6em;
+	line-height:1.6em; /* set line height equal to cell height to center vertically */
+	text-align:center;
+	white-space:nowrap;
+}
+
+/* LINK INSIDE NORMAL CELLS */
+.hornet-skin-francediplo .yui-calendar td.calcell a {
+	color:#336699;
+	display:block;
+	height:100%;
+	text-decoration:none;
+}
+
+/* TODAY'S DATE */
+.hornet-skin-francediplo .yui-calendar td.calcell.today {
+	background-color:#000;
+}
+
+.hornet-skin-francediplo .yui-calendar td.calcell.today a {
+	background-color:#fff;
+}
+
+/* OOM DATES */
+.hornet-skin-francediplo .yui-calendar td.calcell.oom {
+	background-color:#cccccc;
+	color:#a6a6a6;
+	cursor:default;
+}
+
+/* LINK INSIDE OOM CELLS */
+.hornet-skin-francediplo .yui-calendar td.calcell.oom a {
+    color:#a6a6a6;
+}
+
+/* SELECTED DATE */
+.hornet-skin-francediplo .yui-calendar td.calcell.selected {
+	background-color:#fff;
+	color:#000;
+}
+
+.hornet-skin-francediplo .yui-calendar td.calcell.selected a {
+	background-color:#b3d4ff;
+	color:#000;
+}
+
+/* HOVER DATE */
+.hornet-skin-francediplo .yui-calendar td.calcell.calcellhover {
+	background-color:#4066AA;
+	color:#fff;
+	cursor:pointer;
+}
+
+.hornet-skin-francediplo .yui-calendar td.calcell.calcellhover a {
+	background-color:#4066AA;
+	color:#fff;
+}
+
+/* DEFAULT OOB DATES */
+.hornet-skin-francediplo .yui-calendar td.calcell.previous {
+	color:#e0e0e0;
+}
+
+/* CUSTOM RENDERERS */
+.hornet-skin-francediplo .yui-calendar td.calcell.restricted { text-decoration:line-through; }
+.hornet-skin-francediplo .yui-calendar td.calcell.highlight1 { background-color:#ccff99; }
+.hornet-skin-francediplo .yui-calendar td.calcell.highlight2 { background-color:#99ccff; }
+.hornet-skin-francediplo .yui-calendar td.calcell.highlight3 { background-color:#ffcccc; }
+.hornet-skin-francediplo .yui-calendar td.calcell.highlight4 { background-color:#ccff99; }
+
+/* CalendarNavigator */
+
+/* MONTH/YEAR LABEL */
+.hornet-skin-francediplo .yui-calendar a.calnav { 
+	border: 1px solid #F4F2F1;
+	padding:0 4px;
+	text-decoration:none;
+	color:#000;
+	zoom:1;
+}
+
+.hornet-skin-francediplo .yui-calendar a.calnav:hover { 
+	background: url(assets/yui_sprite.png) repeat-x 0 0;
+	border-color:#A0A0A0;
+	cursor:pointer;
+}
+
+/* NAVIGATOR MASK */
+.hornet-skin-francediplo .yui-calcontainer .yui-cal-nav-mask {
+	background-color:#000;
+	opacity:0.25;
+	filter:alpha(opacity=25); /* IE */
+}
+
+/* NAVIGATOR BOUNDING BOX */
+.hornet-skin-francediplo .yui-calcontainer .yui-cal-nav {
+	font-family:arial,helvetica,clean,sans-serif;
+	font-size:93%;
+	border:1px solid #808080;
+	left:50%;
+	margin-left:-7em;
+	width:14em;
+	padding:0;
+	top:2.5em;
+	background-color:#F4F2F1;
+}
+
+.hornet-skin-francediplo .yui-calcontainer.withtitle .yui-cal-nav {
+	top:4.5em;
+}
+
+/* NAVIGATOR BOUNDING BOX */
+.hornet-skin-francediplo .yui-calcontainer.multi .yui-cal-nav {
+	width:16em;
+	margin-left:-8em;
+}
+
+/* NAVIGATOR YEAR/MONTH/BUTTON/ERROR BOUNDING BLOCKS */
+.hornet-skin-francediplo .yui-calcontainer .yui-cal-nav-y,
+.hornet-skin-francediplo .yui-calcontainer .yui-cal-nav-m,
+.hornet-skin-francediplo .yui-calcontainer .yui-cal-nav-b {
+	padding:5px 10px 5px 10px;
+}
+
+.hornet-skin-francediplo .yui-calcontainer .yui-cal-nav-b {
+	text-align:center;
+}
+
+.hornet-skin-francediplo .yui-calcontainer .yui-cal-nav-e {
+	margin-top:5px;
+	padding:5px;
+	background-color:#EDF5FF;
+	border-top:1px solid black;
+	display:none;
+}
+
+/* NAVIGATOR LABELS */
+.hornet-skin-francediplo .yui-calcontainer .yui-cal-nav label {
+	display:block;
+	font-weight:bold;
+}
+
+/* NAVIGATOR MONTH CONTROL */
+.hornet-skin-francediplo .yui-calcontainer .yui-cal-nav-mc {
+	width:100%;
+	_width:auto; /* IE6, IE7 Quirks don't handle 100% well */
+}
+
+/* NAVIGATOR MONTH CONTROL, VALIDATION ERROR */
+.hornet-skin-francediplo .yui-calcontainer .yui-cal-nav-y input.yui-invalid {
+	background-color:#FFEE69;
+	border: 1px solid #000;
+}
+
+/* NAVIGATOR YEAR CONTROL */
+.hornet-skin-francediplo .yui-calcontainer .yui-cal-nav-yc {
+	width:4em;
+}
+
+/* NAVIGATOR BUTTONS */
+
+/* BUTTON WRAPPER */
+.hornet-skin-francediplo .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn {
+	border:1px solid #808080;
+	background: url(assets/yui_sprite.png) repeat-x 0 0;
+	background-color:#ccc;
+	margin: auto .15em;
+}
+
+/* BUTTON (based on button-skin.css) */
+.hornet-skin-francediplo .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn button {
+	padding:0 8px;
+	font-size:93%;
+	line-height: 2;  /* ~24px */
+	*line-height: 1.7; /* For IE */
+	min-height: 2em; /* For Gecko */
+	*min-height: auto; /* For IE */
+	color: #000;
+}
+
+/* DEFAULT BUTTONS */
+/* NOTE: IE6 will only pickup the yui-default specifier from the multiple class specifier */
+.hornet-skin-francediplo .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn.yui-default {
+	border:1px solid #304369;
+	background-color: #4066AA;
+	background: url(assets/yui_sprite.png) repeat-x 0 -1400px;
+}
+
+.hornet-skin-francediplo .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn.yui-default button {
+	color:#fff;
+}
+/* CALENDAR BOUNDING BOX */
+.hornet-skin-francediplo .yui-calcontainer {
+    border:none;
+}
+
+.hornet-skin-francediplo .yui-calendar a.calnav,
+.hornet-skin-francediplo .yui-calendar a.calnav:hover { 
+    background: none;
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+.hornet-skin-francediplo .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn.yui-default,
+.hornet-skin-francediplo .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn {
+    background: #000;
+    border: 1px solid #000000;
+}
+
+.hornet-skin-francediplo .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn button {
+    color: #fff;
+}
+
+.hornet-skin-francediplo .yui-calcontainer .yui-cal-nav label {
+    text-align: left;
+}
+
+.hornet-skin-francediplo .agenda + div .yui-panel .bd {
+    padding: 0;
+}
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
+.yui-overlay,
+.yui-panel-container {
+    visibility: hidden;
+    position: absolute;
+    z-index: 2;
+}
+
+.yui-panel {
+    position:relative;
+}
+
+.yui-panel-container form {
+    margin: 0;
+}
+
+.mask {
+    z-index: 1;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.mask.block-scrollbars {
+    /*
+        Application of "overflow:auto" prevents Mac scrollbars from bleeding
+        through the modality mask in Gecko. The block-scollbars class is only 
+        added for Gecko on MacOS
+    */
+    overflow: auto;
+}
+
+/* 
+    PLEASE NOTE:
+
+    1) ".masked select" is used to prevent <SELECT> elements bleeding through 
+       the modality mask in IE 6. 
+
+    2) ".drag select" is used to hide <SELECT> elements when dragging a 
+       Panel in IE 6.  This is necessary to prevent some redraw problems with 
+       the <SELECT> elements when a Panel instance is dragged.
+    
+    3) ".hide-select select" is appended to an Overlay instance's root HTML 
+       element when it is being annimated by YAHOO.widget.ContainerEffect.  
+       This is necessary because <SELECT> elements don't inherit their parent
+       element's opacity in IE 6.
+
+*/
+
+.masked select,
+.drag select,
+.hide-select select {
+    _visibility: hidden;
+}
+
+.yui-panel-container select {
+    _visibility: inherit;
+}
+
+/*
+
+There are two known issues with YAHOO.widget.Overlay (and its subclasses) that 
+manifest in Gecko-based browsers on Mac OS X:
+
+    1) Elements with scrollbars will poke through Overlay instances floating 
+       above them.
+    
+    2) An Overlay's scrollbars and the scrollbars of its child nodes remain  
+       visible when the Overlay is hidden.
+
+To fix these bugs:
+
+    1) The "overflow" property of an Overlay instance's root element and child 
+       nodes is toggled between "hidden" and "auto" (through the application  
+       and removal of the "hide-scrollbars" and "show-scrollbars" CSS classes)
+       as its "visibility" configuration property is toggled between 
+       "false" and "true."
+    
+    2) The "display" property of <SELECT> elements that are child nodes of the 
+       Overlay instance's root element is set to "none" when it is hidden.
+
+PLEASE NOTE:  
+  
+    1) The "hide-scrollbars" and "show-scrollbars" CSS classes classes are 
+       applied only for Gecko on Mac OS X and are added/removed to/from the 
+       Overlay's root HTML element (DIV) via the "hideMacGeckoScrollbars" and 
+       "showMacGeckoScrollbars" methods of YAHOO.widget.Overlay.
+    
+    2) There may be instances where the CSS for a web page or application 
+       contains style rules whose specificity override the rules implemented by 
+       the Container CSS files to fix this bug.  In such cases, is necessary to 
+       leverage the provided "hide-scrollbars" and "show-scrollbars" classes to 
+       write custom style rules to guard against this bug.
+
+** For more information on this issue, see:
+
+   + https://bugzilla.mozilla.org/show_bug.cgi?id=187435
+   + YUILibrary bug #1723530
+
+*/
+
+.hide-scrollbars,
+.hide-scrollbars * {
+
+    overflow: hidden;
+
+}
+
+.hide-scrollbars select {
+    display: none;
+}
+
+.show-scrollbars {
+    overflow: auto;
+}
+
+.yui-panel-container.show-scrollbars,
+.yui-tt.show-scrollbars {
+    overflow: visible;
+}
+
+.yui-panel-container.show-scrollbars .underlay,
+.yui-tt.show-scrollbars .yui-tt-shadow {
+
+    overflow: auto;
+
+}
+
+/* 
+   Workaround for Safari 2.x - the yui-force-redraw class is applied, and then removed when
+   the Panel's content changes, to force Safari 2.x to redraw the underlay.
+   We attempt to choose a CSS property which has no visual impact when added,
+   removed.
+*/
+.yui-panel-container.shadow .underlay.yui-force-redraw {
+    padding-bottom: 1px;
+}
+
+.yui-effect-fade .underlay, .yui-effect-fade .yui-tt-shadow {
+    display:none;
+}
+
+/*
+    PLEASE NOTE: The <DIV> element used for a Tooltip's shadow is appended 
+    to its root element via JavaScript once it has been rendered.  The 
+    code that creates the shadow lives in the Tooltip's public "onRender" 
+    event handler that is a prototype method of YAHOO.widget.Tooltip.  
+    Implementers wishing to remove a Tooltip's shadow or add any other markup
+    required for a given skin for Tooltip should override the "onRender" method.
+*/
+
+.yui-tt-shadow {
+    position: absolute;
+}
+
+.yui-override-padding {
+    padding:0 !important;
+}
+
+.yui-panel-container .container-close {
+    overflow:hidden;
+    text-indent:-10000em;
+    text-decoration:none;
+}
+
+.yui-overlay.yui-force-redraw, .yui-panel-container.yui-force-redraw {
+    margin-bottom:1px;
+}
+
+/* Panel modality mask styles */
+.hornet-skin-francediplo .mask {
+    background-color: #000;
+    opacity: .25;
+    filter: alpha(opacity=25);  /* Set opacity in IE */
+}
+
+/* Panel styles */
+.hornet-skin-francediplo .yui-panel-container {
+    padding:0 1px;
+    /* Padding added for IE to allow 0,0 alignment with shadow */
+    *padding:2px;
+}
+
+.hornet-skin-francediplo .yui-panel {
+    position: relative;
+    left:0;
+    top:0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #808080;
+    background-color: #F4F2F1;
+    z-index: 1;
+
+    /* Rollback rounded corner support for IE6/7 */
+    *border-width:1px;
+    *zoom:1;
+    _zoom:normal;
+}
+
+.hornet-skin-francediplo .yui-panel .hd,
+.hornet-skin-francediplo .yui-panel .bd,
+.hornet-skin-francediplo .yui-panel .ft {
+    border-style: solid;
+    border-width: 0 1px;
+    border-color: #808080;
+    margin: 0 -1px;
+
+    /* Rollback rounded corner support for IE6/7 */
+    *margin:0;
+    *border:0;
+}
+
+.hornet-skin-francediplo .yui-panel .hd {
+    border-bottom: solid 1px #ccc;
+}
+
+.hornet-skin-francediplo .yui-panel .bd,
+.hornet-skin-francediplo .yui-panel .ft {
+    background-color: #F4F2F1;
+}
+
+.hornet-skin-francediplo .yui-panel .hd {
+    padding: 0 10px;
+    font-size: 93%;  /* 12px */
+    line-height: 2;  /* ~24px */
+    *line-height: 1.9; /* For IE */
+    font-weight: bold;
+    color: #000;
+    background: url(assets/yui_sprite.png) repeat-x 0 -200px;
+}
+
+.hornet-skin-francediplo .yui-panel .bd {
+    padding: 10px;
+}
+
+.hornet-skin-francediplo .yui-panel .ft {
+    border-top: solid 1px #808080;
+    padding: 5px 10px;
+    font-size: 77%;
+}
+
+.hornet-skin-francediplo .yui-panel-container.focused .yui-panel .hd {
+
+}
+
+.hornet-skin-francediplo .container-close {
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    width: 25px;
+    height: 15px;
+    background: url(assets/yui_sprite.png) no-repeat 0 -300px;
+    cursor:pointer;
+}
+
+/* Panel underlay styles */
+.hornet-skin-francediplo .yui-panel-container .underlay {
+    right: -1px;
+    left: -1px;
+}
+
+.hornet-skin-francediplo .yui-panel-container.matte {
+    padding: 9px 10px;
+    background-color: #fff;
+}
+
+.hornet-skin-francediplo .yui-panel-container.shadow {
+    /* IE 7 Quirks Mode and IE 6 Standards Mode and Quirks mode */
+    _padding: 2px 4px 0 2px;
+}
+
+.hornet-skin-francediplo .yui-panel-container.shadow .underlay {
+    position: absolute;
+    top: 2px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+
+    /* IE7 Strict (provides 3px shadow (when combined with 2px padding applied to container) */
+    *top: 4px;
+    *left: -1px;
+    *right: -1px;
+    *bottom: -1px;
+
+    /* IE 7 Quirks Mode and IE 6 Standards Mode and Quirks mode */
+    _top: 0;
+    _left: 0;
+    _right: 0;
+    _bottom: 0;
+    _margin-top: 3px;
+    _margin-left: -1px;
+
+    background-color: #000;
+    opacity: .12;
+    filter: alpha(opacity=12);  /* Set opacity in IE */
+}
+
+
+/* Dialog styles */
+.hornet-skin-francediplo .yui-dialog .ft {
+    border-top: none;
+    padding: 0 10px 10px 10px;
+    font-size: 100%;
+}
+
+.hornet-skin-francediplo .yui-dialog .ft .button-group {
+    display: block;
+    text-align: right;
+}
+
+/* Dialog default button style */
+.hornet-skin-francediplo .yui-dialog .ft button.default {
+    font-weight:bold;
+}
+
+/* Dialog default YUI Button style */
+.hornet-skin-francediplo .yui-dialog .ft span.default {
+    border-color: #304369;
+    background-position: 0 -1400px;
+}
+
+.hornet-skin-francediplo .yui-dialog .ft span.default .first-child {
+    border-color: #304369;
+}
+
+.hornet-skin-francediplo .yui-dialog .ft span.default button {
+    color: #fff;
+}
+
+/* Dialog YUI Button disabled state */
+.hornet-skin-francediplo .yui-dialog .ft span.yui-button-disabled {
+    background-position:0pt -1500px;
+    border-color:#ccc;
+}
+
+.hornet-skin-francediplo .yui-dialog .ft span.yui-button-disabled .first-child {
+    border-color:#ccc;
+}
+
+.hornet-skin-francediplo .yui-dialog .ft span.yui-button-disabled button {
+    color:#a6a6a6;
+}
+
+/* SimpleDialog icon styles */
+.hornet-skin-francediplo .yui-simple-dialog .bd .yui-icon {
+    background: url(assets/yui_sprite.png) no-repeat 0 0;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    float: left;
+}
+
+.hornet-skin-francediplo .yui-simple-dialog .bd span.blckicon {
+    background-position: 0 -1100px;
+}
+
+.hornet-skin-francediplo .yui-simple-dialog .bd span.alrticon {
+    background-position: 0 -1050px;
+}
+
+.hornet-skin-francediplo .yui-simple-dialog .bd span.hlpicon {
+    background-position: 0 -1150px;
+}
+
+.hornet-skin-francediplo .yui-simple-dialog .bd span.infoicon {
+    background-position: 0 -1200px;
+}
+
+.hornet-skin-francediplo .yui-simple-dialog .bd span.warnicon {
+    background-position: 0 -1900px;
+}
+
+.hornet-skin-francediplo .yui-simple-dialog .bd span.tipicon {
+    background-position: 0 -1250px;
+}
+
+/* Tooltip styles */
+.hornet-skin-francediplo .yui-tt .bd {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: #000;
+    padding: 2px 5px;
+    border-color: #D4C237 #A6982B #A6982B #A6982B;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #FFEE69;
+}
+
+.hornet-skin-francediplo .yui-tt.show-scrollbars .bd {
+    overflow: auto;
+}
+
+.hornet-skin-francediplo .yui-tt-shadow {
+    top: 2px;
+    right: -3px;
+    left: -3px;
+    bottom: -3px;
+    background-color: #000;
+}
+
+.hornet-skin-francediplo .yui-tt-shadow-visible {
+    opacity: .12;
+    filter: alpha(opacity=12);  /* For IE */
+}
+/* MODALE */
+.hornet-skin-francediplo .yui-panel-container .hd h2,
+.hornet-skin-francediplo .yui-panel-container .hd h3,
+.hornet-skin-francediplo .yui-panel-container .hd h4,
+.hornet-skin-francediplo .yui-panel-container .hd h5 {
+    padding: 0;
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+}
+
+/* Dialog styles */
+.hornet-skin-francediplo .yui-dialog .ft {
+    clear: both;
+}
+
+.hornet-skin-francediplo .yui-dialog .ft .button-group {
+    text-align: center;
+}
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
+/* foundational CSS */
+
+/* mask */
+.yui-skin-sam .yui-dt-mask {
+    position:absolute;
+    z-index:9500;
+}
+
+/* scrollable */
+.yui-dt-tmp {
+    position:absolute;
+    left:-9000px;
+}
+
+.yui-dt-scrollable .yui-dt-bd {
+    overflow:auto;
+}
+.yui-dt-scrollable .yui-dt-hd {
+    overflow:hidden;
+    position:relative; /* for ie overflow bug http://rowanw.com/bugs/overflow_relative.htm */
+} 
+
+.yui-dt-scrollable .yui-dt-bd thead tr,
+.yui-dt-scrollable .yui-dt-bd thead th {
+    position:absolute;
+    left:-1500px;
+}
+
+.yui-dt-scrollable tbody {
+    -moz-outline:none;
+}
+
+/* sortable columns */
+
+.yui-skin-sam thead .yui-dt-sortable {
+    cursor:pointer;
+}
+
+/* draggable columns */
+.yui-skin-sam thead .yui-dt-draggable {
+    cursor: move;
+}
+.yui-dt-coltarget {
+    position: absolute;
+    z-index: 999;
+}
+
+/* resizeable columns */
+.yui-dt-hd {
+    zoom:1; 
+}
+th.yui-dt-resizeable .yui-dt-resizerliner {
+    position:relative;
+}
+.yui-dt-resizer {
+    position:absolute;
+    right:0;
+    bottom:0;
+    height:100%;
+    cursor:e-resize;
+    cursor:col-resize;
+    background-color:#CCC;opacity:0;filter: alpha(opacity=0); /* Bug 1952811: IE transparency z-index */
+}
+.yui-dt-resizerproxy {
+    visibility:hidden;
+    position:absolute;
+    z-index:9000;
+    background-color:#CCC;opacity:0;filter: alpha(opacity=0); /* Bug 1952811: IE transparency z-index */
+}
+
+/* hidden columns */
+th.yui-dt-hidden .yui-dt-liner, 
+td.yui-dt-hidden .yui-dt-liner,
+th.yui-dt-hidden .yui-dt-resizer {
+    /*TODO: document change from 2.5.2 to 2.6
+    margin:0;
+    padding:0;
+    white-space:nowrap;
+    width:1px;
+    overflow:hidden;*/
+    display:none;
+}
+
+/* editing */
+.yui-dt-editor, .yui-dt-editor-shim {
+    position:absolute;z-index:9000;
+}
+
+/* basic skin styles */
+.hornet-skin-francediplo .yui-dt table {
+    margin:0;padding:0;
+    font-family:arial;font-size:inherit;
+    border-collapse:separate;*border-collapse:collapse;border-spacing:0; /* since ie6 and ie7 behave differently */
+    border:2px solid #CCCCCC;
+}
+.hornet-skin-francediplo .yui-dt thead {border-spacing:0;} /* for safari bug */
+
+.hornet-skin-francediplo .yui-dt caption {
+    color:#000000;
+    font-size:85%;
+    font-weight:normal;
+    font-style:italic;
+    line-height:1;
+    padding:1em 0pt;
+    text-align:center;
+}
+
+.hornet-skin-francediplo .yui-dt th {
+    background:#D8D8DA url(assets/yui_sprite.png) repeat-x 0 0; /* header gradient */
+}
+.hornet-skin-francediplo .yui-dt th,
+.hornet-skin-francediplo .yui-dt th a {
+    font-weight:normal;text-decoration:none;color:#000; /* header text */
+    vertical-align:bottom;
+}
+.hornet-skin-francediplo .yui-dt th {
+    margin:0;padding:0;
+    border:none;
+    border-right:1px solid #CBCBCB;/*  inner column border */
+}
+.hornet-skin-francediplo .yui-dt tr.yui-dt-first td {
+    border-top:1px solid #ccc;  /* tbody top border  */
+}
+.hornet-skin-francediplo .yui-dt th .yui-dt-liner {
+    white-space:nowrap;
+}
+.hornet-skin-francediplo .yui-dt-liner {
+    margin:0;padding:0;
+    padding:3px 5px 3px 5px; /* cell padding */
+}
+.hornet-skin-francediplo .yui-dt-coltarget {
+    width: 5px;
+    background-color: red;
+}
+.hornet-skin-francediplo .yui-dt td {
+    margin:0;padding:0;
+    border:none;
+    border-right:1px solid #CBCBCB; /* inner column border */
+    text-align:left;
+}
+.hornet-skin-francediplo .yui-dt-list td {
+    border-right:none; /* disable inner column border in list mode */
+}
+.hornet-skin-francediplo .yui-dt-resizer {
+    width:6px;
+}
+
+/* mask */
+.hornet-skin-francediplo .yui-dt-mask {
+    background-color: #000;
+    opacity: .25;
+    filter: alpha(opacity=25);  /* Set opacity in IE */
+}
+
+/* messaging */
+.hornet-skin-francediplo .yui-dt-message  {
+    background-color:#FFF;
+}
+
+/* scrolling */
+.hornet-skin-francediplo .yui-dt-scrollable table {border:none;}
+.hornet-skin-francediplo .yui-dt-scrollable .yui-dt-hd {border-left:1px solid #7F7F7F;border-top:1px solid #7F7F7F;border-right:1px solid #7F7F7F;}
+.hornet-skin-francediplo .yui-dt-scrollable .yui-dt-bd {border-left:1px solid #7F7F7F;border-bottom:1px solid #7F7F7F;border-right:1px solid #7F7F7F;background-color:#FFF;}
+.hornet-skin-francediplo .yui-dt-scrollable .yui-dt-data tr.yui-dt-last td {border-bottom:1px solid #7F7F7F;}
+
+/* sortable columns */
+.hornet-skin-francediplo th.yui-dt-asc,
+.hornet-skin-francediplo th.yui-dt-desc {
+    background:url(assets/yui_sprite.png) repeat-x 0 -100px; /* sorted header gradient */
+}
+.hornet-skin-francediplo th.yui-dt-sortable .yui-dt-label {
+    margin-right:10px;
+}
+.hornet-skin-francediplo th.yui-dt-asc .yui-dt-liner {
+    background:url(assets/yui_dt-arrow-up.png) no-repeat right; /* sorted header gradient */
+}
+.hornet-skin-francediplo th.yui-dt-desc .yui-dt-liner {
+    background:url(assets/yui_dt-arrow-dn.png) no-repeat right; /* sorted header gradient */
+}
+
+/* editing */
+tbody .yui-dt-editable {
+    cursor:pointer;
+}
+.yui-dt-editor {
+    text-align:left;
+    background-color:#F2F2F2;
+    border:1px solid #808080;
+    padding:6px;
+}
+.yui-dt-editor label {
+    padding-left:4px;padding-right:6px;
+}
+.yui-dt-editor .yui-dt-button {
+    padding-top:6px;text-align:right;
+}
+.yui-dt-editor .yui-dt-button button {
+    background:url(assets/yui_sprite.png) repeat-x 0 0;
+    border:1px solid #999;
+    width:4em;height:1.8em;
+    margin-left:6px;
+}
+.yui-dt-editor .yui-dt-button button.yui-dt-default {
+    background:url(assets/yui_sprite.png) repeat-x 0 -1400px;
+    background-color: #5584E0;
+    border:1px solid #304369;
+    color:#FFF
+}
+.yui-dt-editor .yui-dt-button button:hover {
+    background:url(assets/yui_sprite.png) repeat-x 0 -1300px;
+    color:#000;
+}
+.yui-dt-editor .yui-dt-button button:active {
+    background:url(assets/yui_sprite.png) repeat-x 0 -1700px;
+    color:#000;
+}
+
+/* striping */
+.hornet-skin-francediplo tr.yui-dt-even { background-color:#FFF; } /* white */
+.hornet-skin-francediplo tr.yui-dt-odd { background-color:#F4F2F1; } /* light blue */
+.hornet-skin-francediplo tr.yui-dt-even td.yui-dt-asc,
+.hornet-skin-francediplo tr.yui-dt-even td.yui-dt-desc { background-color:#F4F2F1; } /* light blue sorted */
+.hornet-skin-francediplo tr.yui-dt-odd td.yui-dt-asc,
+.hornet-skin-francediplo tr.yui-dt-odd td.yui-dt-desc { background-color:#DBEAFF; } /* dark blue sorted */
+
+/* disable striping in list mode */
+.hornet-skin-francediplo .yui-dt-list tr.yui-dt-even { background-color:#FFF; } /* white */
+.hornet-skin-francediplo .yui-dt-list tr.yui-dt-odd { background-color:#FFF; } /* white */
+.hornet-skin-francediplo .yui-dt-list tr.yui-dt-even td.yui-dt-asc,
+.hornet-skin-francediplo .yui-dt-list tr.yui-dt-even td.yui-dt-desc { background-color:#F4F2F1; } /* light blue sorted */
+.hornet-skin-francediplo .yui-dt-list tr.yui-dt-odd td.yui-dt-asc,
+.hornet-skin-francediplo .yui-dt-list tr.yui-dt-odd td.yui-dt-desc { background-color:#F4F2F1; } /* light blue sorted */
+
+/* highlighting */
+.hornet-skin-francediplo th.yui-dt-highlighted,
+.hornet-skin-francediplo th.yui-dt-highlighted a {
+    background-color:#B2D2FF; /* med blue hover */
+}
+.hornet-skin-francediplo tr.yui-dt-highlighted,
+.hornet-skin-francediplo tr.yui-dt-highlighted td.yui-dt-asc,
+.hornet-skin-francediplo tr.yui-dt-highlighted td.yui-dt-desc,
+.hornet-skin-francediplo tr.yui-dt-even td.yui-dt-highlighted,
+.hornet-skin-francediplo tr.yui-dt-odd td.yui-dt-highlighted {
+    cursor:pointer;
+    background-color:#B2D2FF; /* med blue hover */
+}
+
+/* enable highlighting in list mode */
+.hornet-skin-francediplo .yui-dt-list th.yui-dt-highlighted,
+.hornet-skin-francediplo .yui-dt-list th.yui-dt-highlighted a {
+    background-color:#B2D2FF; /* med blue hover */
+}
+.hornet-skin-francediplo .yui-dt-list tr.yui-dt-highlighted,
+.hornet-skin-francediplo .yui-dt-list tr.yui-dt-highlighted td.yui-dt-asc,
+.hornet-skin-francediplo .yui-dt-list tr.yui-dt-highlighted td.yui-dt-desc,
+.hornet-skin-francediplo .yui-dt-list tr.yui-dt-even td.yui-dt-highlighted,
+.hornet-skin-francediplo .yui-dt-list tr.yui-dt-odd td.yui-dt-highlighted {
+    cursor:pointer;
+    background-color:#B2D2FF; /* med blue  hover */
+}
+
+/* selection */
+.hornet-skin-francediplo th.yui-dt-selected,
+.hornet-skin-francediplo th.yui-dt-selected a {
+    background-color:#446CD7; /* bright blue selected cell */
+}
+.hornet-skin-francediplo tr.yui-dt-selected td,
+.hornet-skin-francediplo tr.yui-dt-selected td.yui-dt-asc,
+.hornet-skin-francediplo tr.yui-dt-selected td.yui-dt-desc {
+    background-color:#426FD9; /* bright blue selected row */
+    color:#FFF;
+}
+.hornet-skin-francediplo tr.yui-dt-even td.yui-dt-selected,
+.hornet-skin-francediplo tr.yui-dt-odd td.yui-dt-selected {
+    background-color:#446CD7; /* bright blue selected cell */
+    color:#FFF;
+}
+
+/* enable selection in list mode */
+.hornet-skin-francediplo .yui-dt-list th.yui-dt-selected,
+.hornet-skin-francediplo .yui-dt-list th.yui-dt-selected a {
+    background-color:#446CD7; /* bright blue selected cell */
+}
+.hornet-skin-francediplo .yui-dt-list tr.yui-dt-selected td,
+.hornet-skin-francediplo .yui-dt-list tr.yui-dt-selected td.yui-dt-asc,
+.hornet-skin-francediplo .yui-dt-list tr.yui-dt-selected td.yui-dt-desc {
+    background-color:#426FD9; /* bright blue selected row */
+    color:#FFF;
+}
+.hornet-skin-francediplo .yui-dt-list tr.yui-dt-even td.yui-dt-selected,
+.hornet-skin-francediplo .yui-dt-list tr.yui-dt-odd td.yui-dt-selected {
+    background-color:#446CD7; /* bright blue selected cell */
+    color:#FFF;
+}
+
+/* pagination */
+.hornet-skin-francediplo .yui-dt-paginator {
+    display:block;margin:6px 0;white-space:nowrap;
+}
+.hornet-skin-francediplo .yui-dt-paginator .yui-dt-first,
+.hornet-skin-francediplo .yui-dt-paginator .yui-dt-last,
+.hornet-skin-francediplo .yui-dt-paginator .yui-dt-selected {
+    padding:2px 6px;
+}
+.hornet-skin-francediplo .yui-dt-paginator a.yui-dt-first,
+.hornet-skin-francediplo .yui-dt-paginator a.yui-dt-last {
+    text-decoration:none;
+}
+.hornet-skin-francediplo .yui-dt-paginator .yui-dt-previous,
+.hornet-skin-francediplo .yui-dt-paginator .yui-dt-next {
+    display:none;
+}
+.hornet-skin-francediplo a.yui-dt-page {
+    border:1px solid #CBCBCB;
+    padding:2px 6px;
+    text-decoration:none;
+    background-color:#fff
+}
+.hornet-skin-francediplo .yui-dt-selected {
+    border:1px solid #fff;
+    background-color:#fff;
+}
+.hornet-skin-francediplo .yui-dt th {
+    background: #F4F2F1;
+}
+
+.hornet-skin-francediplo .yui-dt th,
+.hornet-skin-francediplo .yui-dt th a {
+    font-weight:bold;
+    text-align:left;
+}
+
+.hornet-skin-francediplo .yui-dt th a {
+    text-decoration:underline;
+}
+
+.hornet-skin-francediplo .yui-dt table {
+    width: 100%;
+}
+
+.hornet-skin-francediplo .yui-dt caption {
+    visibility:hidden;   
+    margin:0;
+    height:0;
+    padding: 0;
+}
+
+/* spécificité Hornet */
+
+/* TABLEAU */
+.hornet-skin-francediplo .titreTableau {
+    color:#000000;
+    margin-bottom:0;
+    margin-top:0;
+    font-size:115%;
+    padding: 0.2em 0 0.2em 0.7em;
+    padding-left: 0.33em;
+    background-color: #F4F2F1;
+    border: 1px solid #ccc;
+}
+
+.hornet-skin-francediplo .outils {
+    padding-left: 40px;
+    border:1px solid #ccc;
+    border-width:0 1px;
+    background-color: #FBF9F8;
+}
+.hornet-skin-francediplo .outils.bas {
+    border-width:1px;
+    border-top: 0px;
+    min-height: 2.1em; 
+}
+
+.hornet-skin-francediplo .outils .icone {
+    border-width: 1px;
+    border-style: solid;
+    margin: 2px 0px;
+    padding: 2px 4px;
+    word-spacing: normal;
+}
+.hornet-skin-francediplo .outils .icone + .icone {
+    border-left: 0;
+}
+
+.hornet-skin-francediplo .outils .actions {
+    display: inline;
+    word-spacing: -1em;
+}
+
+.hornet-skin-francediplo .outils .actions .icone {    
+    color: #044CA0;
+    border-color:#999;
+    background-color: url(assets/sprite-global.png) repeat-x 0 -610px transparent;
+    font-size: 100%;
+}
+.hornet-skin-francediplo .outils .actions .icone:hover,
+.hornet-skin-francediplo .outils .actions .icone:active {
+    color: #000;
+    background-color: #e4f1ff;
+}
+
+.hornet-skin-francediplo .outils .actionsMasse {
+    margin-left: -4px;  
+}
+
+.hornet-skin-francediplo .outils .actionsMasse .icone {
+    color: #fff;
+    border-color: #999;
+    background-color: #e4f1ff;;
+}
+
+.hornet-skin-francediplo .outils .actionsMasse .icone:hover,
+.hornet-skin-francediplo .outils .actionsMasse .icone:active {
+    color: #fff;
+    border-color: #7D98B8;
+    background-position: 0 -610px;
+}
+
+.hornet-skin-francediplo .outils .selection {
+    display: inline-block;
+    margin-left: -20px;
+    width: 20px;
+    height: 18px;
+}
+
+.hornet-skin-francediplo .outils.haut .selection {
+    background: url(assets/ligne-haut.png) left top no-repeat;
+    vertical-align: bottom;
+}
+
+.hornet-skin-francediplo .outils.bas .selection {
+    background: url(assets/ligne-bas.png) left bottom no-repeat;
+    vertical-align: top;
+}
+
+.hornet-skin-francediplo .yui-dt-data .icone:hover,
+.hornet-skin-francediplo .yui-dt-data .icone:active {
+/*  background-color: #B1B4B3;*/
+}
+
+.hornet-skin-francediplo .yui-dt-col-suppression,
+.hornet-skin-francediplo .yui-dt-col-edition,
+.hornet-skin-francediplo .yui-dt-col-consultation {
+    width: 30px;
+}
+
+.hornet-skin-francediplo .yui-dt-col-selection {
+    background: url(assets/ligne-centre.png) repeat-y 19px top;
+    width: 40px;
+}
+.hornet-skin-francediplo .yui-dt-col-selection * {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+}
+
+.hornet-skin-francediplo .filtre {
+    border: 1px solid #044CA0;
+    border-bottom: 0;
+    padding-bottom: 0.5em;
+}
+
+.hornet-skin-francediplo .filtre .button-group {
+    margin: 0;
+}
+
+.hornet-skin-francediplo .filtre fieldset {
+    margin: 0;
+}
+
+.hornet-skin-francediplo .yui-dt th a {
+    text-decoration: underline;
+}
+.yui3-js-enabled .yui3-filtre-loading {
+   display: none;
+}
+
+/* Hide by positioning off-screen */
+.yui3-filtre-hidden {
+    position:absolute;
+    left:-10000px;
+    top:-10000em;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+.hornet-skin-francediplo .yui3-filtre-button-show-hidden:after {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid;
+    bottom: -10px;
+    content: "";
+    float: right;
+    height: 0;
+    position: relative;
+    right: -3px;
+    width: 0;
+}
+.hornet-skin-francediplo .yui3-filtre-button-show-visible:after {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid;
+    bottom: -2px;
+    content: "";
+    float: right;
+    height: 0;
+    position: relative;
+    right: -3px;
+    width: 0;
+}
+.hornet-skin-francediplo .yui3-filtre-button-show-active {
+    background: #8ED77A !important;
+}
+/* YUI 3.8.1 (build 5795) Copyright 2013 Yahoo! Inc. http://yuilibrary.com/license/ */
+.yui3-menu .yui3-menu {
+
+	position: absolute;
+	z-index: 1;
+
+}
+
+
+.yui3-menu .yui3-shim {
+
+	/* 
+		Styles for the <iframe> shim used to prevent <select> elements from poking through 
+		submenus in IE < 7.  Note: For peformance, creation of the <iframe> shim for each submenu  
+		is deferred until it is initially made visible by the user.
+	*/
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+	opacity: 0;
+	filter: alpha(opacity=0);  /* For IE since it doesn't implement the CSS3 "opacity" property. */
+	border: none;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+
+}
+
+.yui3-menu-hidden {
+
+	/*
+		Position hidden menus outside the viewport boundaries to prevent them from 
+		triggering scrollbars on the viewport.
+	*/
+
+	top: -10000px;
+	left: -10000px;
+
+	/*
+		Using "visibility:hidden" over "display" none because:
+		
+		1)	As the "position" property for submenus is set to "absolute", they are out of 
+			the document flow and take up no space.  Therefore, from that perspective use of 
+			"display:none" is redundant.
+		
+		2)	According to MSDN use of "display:none" is more expensive:
+			"Display is the more expensive of the two CSS properties, so if you are 
+			making elements appear and disappear often, visibility will be faster." 
+			(See http://msdn.microsoft.com/en-us/library/bb264005(VS.85).aspx)
+	*/
+
+	visibility: hidden;
+
+}
+
+.yui3-menu li {
+
+    list-style-type: none;    
+
+}
+
+.yui3-menu ul, 
+.yui3-menu li { 
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.yui3-menu-label,
+.yui3-menuitem-content {
+
+    text-align: left;
+    white-space: nowrap;
+    display: block;
+
+}
+
+.yui3-menu-horizontal li {
+
+	float: left;
+	width: auto;
+
+}
+
+.yui3-menu-horizontal li li {
+
+	float: none;
+
+}
+
+.yui3-menu-horizontal ul {
+
+	/*
+		Use of "zoom" sets the "hasLayout" property to "true" in IE (< 8).  When "hasLayout" is 
+		set to "true", an element can clear its floated descendents.  For more:
+		http://msdn.microsoft.com/en-gb/library/ms533776(VS.85).aspx
+	*/
+
+	*zoom: 1;
+
+}
+
+.yui3-menu-horizontal ul ul {
+
+	/*
+		No need to clear <ul>s of submenus of horizontal menus since <li>s of submenus
+		aren't floated.
+	*/
+
+	*zoom: normal;
+
+}			
+
+.yui3-menu-horizontal>.yui3-menu-content>ul:after {
+
+	/*	Self-clearing solution for Opera, Webkit, Gecko and IE > 7	*/
+
+	content: "";
+	display: block;
+	clear: both;
+	line-height: 0;
+	font-size: 0;
+	visibility: hidden;
+
+}
+
+
+/*
+	The following two rules are for IE 7.  Triggering "hasLayout" (via use of "zoom") prevents 
+	first-tier submenus from hiding when the mouse is moving from an menu label in a root menu to 
+	its corresponding submenu.
+*/
+
+.yui3-menu-content {
+
+	*zoom: 1;
+    
+}
+
+
+.yui3-menu-hidden .yui3-menu-content {
+
+	*zoom: normal;
+
+}
+
+
+/*
+	The following two rules are for IE 6 (Standards Mode and Quirks Mode) and IE 7 (Quirks Mode 
+	only).  Triggering "hasLayout" (via use of "zoom") fixes a bug in IE where mousing mousing off 
+	the text node of menuitem or menu label will incorrectly trigger the mouseout event.
+*/
+
+.yui3-menuitem-content,
+.yui3-menu-label {
+
+	_zoom: 1;
+
+}
+
+.yui3-menu-hidden .yui3-menuitem-content,
+.yui3-menu-hidden .yui3-menu-label {
+
+	_zoom: normal;
+
+}
+/* YUI 3.8.1 (build 5795) Copyright 2013 Yahoo! Inc. http://yuilibrary.com/license/ */
+/* Vertical menus and submenus */
+
+.hornet-skin-francediplo .yui3-menu-content, 
+.hornet-skin-francediplo .yui3-menu .yui3-menu .yui3-menu-content {
+
+    line-height: 1.5;  /* 18px */
+    *line-height: 1.45; /* For IE */
+    border: solid 1px #CCCCCC;
+    background: #F4F2F1;
+    padding: 3px 0;
+
+}
+
+.hornet-skin-francediplo .yui3-menu .yui3-menu .yui3-menu-content {
+
+	font-size: 100%;
+    
+}
+
+
+/* Horizontal menus */
+
+.hornet-skin-francediplo .yui3-menu-horizontal .yui3-menu-content {
+
+    line-height: 2;  /* ~24px */
+    *line-height: 1.9; /* For IE */
+    background: #4066AA url(assets/yui_sprite.png) repeat-x 0 0;
+    padding: 0;
+
+}
+
+
+.hornet-skin-francediplo .yui3-menu ul,
+.hornet-skin-francediplo .yui3-menu ul ul {
+
+	margin-top: 3px;
+	padding-top: 3px;
+    border-top: solid 1px #ccc;
+
+}
+
+.hornet-skin-francediplo .yui3-menu ul.first-of-type {
+
+    border: 0;
+	margin: 0;
+	padding: 0;    
+
+}
+
+.hornet-skin-francediplo .yui3-menu-horizontal ul {
+
+	padding: 0;
+	margin: 0;
+	border: 0;
+
+}
+
+
+.hornet-skin-francediplo .yui3-menu li,
+.hornet-skin-francediplo .yui3-menu .yui3-menu li {
+
+    /*
+        For and IE 6 (Strict Mode and Quirks Mode) and IE 7 (Quirks Mode only): 
+		Used to collapse superfluous white space between <li> elements that is 
+		triggered by the "display" property of the <a> elements being set to 
+		"block" by node-menunav-core.css file.
+    */
+
+    _border-bottom: solid 1px #fff;
+
+}
+
+.hornet-skin-francediplo .yui3-menu-horizontal li {
+
+	_border-bottom: 0;
+
+}
+
+.hornet-skin-francediplo .yui3-menubuttonnav li {
+
+    border-right: solid 1px #ccc;
+
+}
+
+.hornet-skin-francediplo .yui3-splitbuttonnav li {
+
+    border-right: solid 1px #808080;
+
+}
+
+.hornet-skin-francediplo .yui3-menubuttonnav li li,
+.hornet-skin-francediplo .yui3-splitbuttonnav li li {
+
+	border-right: 0;
+
+}
+
+
+/* Menuitems and menu labels */
+
+
+.hornet-skin-francediplo .yui3-menu-label,
+.hornet-skin-francediplo .yui3-menu .yui3-menu .yui3-menu-label,
+.hornet-skin-francediplo .yui3-menuitem-content,
+.hornet-skin-francediplo .yui3-menu .yui3-menu .yui3-menuitem-content {
+
+    padding: 0 20px;
+    color: #FFF;
+    text-decoration: none;
+    cursor: default;
+
+	/*
+		Necessary specify values for border, position and margin to override 
+		values specified in the selectors that follow. 
+	*/
+
+	float: none;
+	border: 0;
+	margin: 0;
+
+}
+
+.hornet-skin-francediplo .yui3-menu-horizontal .yui3-menu-label,
+.hornet-skin-francediplo .yui3-menu-horizontal .yui3-menuitem-content {
+
+    padding: 0 16px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    border-width: 1px 0;
+    margin: -1px 0;
+
+    float: left; 	/*	Ensures that menu labels clear floated descendents. 
+    					Also gets negative margins working in IE 7 
+						(Strict Mode). */
+    width: auto;
+
+}
+
+.hornet-skin-francediplo .yui3-menu-label,
+.hornet-skin-francediplo .yui3-menu .yui3-menu .yui3-menu-label {
+
+	background: url(assets/yui_vertical-menu-submenu-indicator.png) right center no-repeat;
+
+}
+
+.hornet-skin-francediplo .yui3-menu-horizontal .yui3-menu-label {
+
+    background: url(assets/yui_sprite.png) repeat-x 0 0;
+
+}
+
+.hornet-skin-francediplo .yui3-menubuttonnav .yui3-menu-label,
+.hornet-skin-francediplo .yui3-splitbuttonnav .yui3-menu-label {
+
+	background-image: none;
+
+}
+
+.hornet-skin-francediplo .yui3-menubuttonnav .yui3-menu-label {
+
+    padding-right: 0;
+
+}
+
+.hornet-skin-francediplo .yui3-menubuttonnav .yui3-menu-label em {
+
+	font-style: normal;
+	padding-right: 20px;
+    display: block;
+    background: url(assets/yui_horizontal-menu-submenu-indicator.png) right center no-repeat;
+
+}
+
+
+.hornet-skin-francediplo .yui3-splitbuttonnav .yui3-menu-label {
+
+	padding: 0;
+
+}
+
+.hornet-skin-francediplo .yui3-splitbuttonnav .yui3-menu-label a {
+
+	float: left;
+	width: auto;
+    color: #000;
+    text-decoration: none;
+    cursor: default;
+	padding: 0 5px 0 10px;
+
+}
+
+.hornet-skin-francediplo .yui3-splitbuttonnav .yui3-menu-label .yui3-menu-toggle {
+	
+	padding: 0;	/* Overide padding applied by the preceeding rule. */
+	border-left: solid 1px #ccc; 
+	width: 15px;
+	overflow: hidden;
+	text-indent: -1000px;
+    background: url(assets/yui_horizontal-menu-submenu-indicator.png) 3px center no-repeat;	
+	
+}
+
+
+/* Selected menuitem */
+
+.hornet-skin-francediplo .yui3-menu-label-active,
+.hornet-skin-francediplo .yui3-menu-label-menuvisible,
+.hornet-skin-francediplo .yui3-menu .yui3-menu .yui3-menu-label-active,
+.hornet-skin-francediplo .yui3-menu .yui3-menu .yui3-menu-label-menuvisible {
+
+	background-color: #B3D4FF;
+
+}
+
+.hornet-skin-francediplo .yui3-menuitem-active .yui3-menuitem-content,
+.hornet-skin-francediplo .yui3-menu .yui3-menu .yui3-menuitem-active .yui3-menuitem-content {
+
+	background-image: none;
+    background-color: #B3D4FF;
+    
+    /*
+    	Undo values set for "border-left-width" and "margin-left" when the root 
+    	menu has a class of "yui-menubuttonnav" or "yui-splitbuttonnav" applied.
+    */
+
+	border-left-width: 0;
+    margin-left: 0;
+    cursor: pointer;
+}
+
+.hornet-skin-francediplo .yui3-menu-horizontal .yui3-menu-label-active,
+.hornet-skin-francediplo .yui3-menu-horizontal .yui3-menuitem-active .yui3-menuitem-content,
+.hornet-skin-francediplo .yui3-menu-horizontal .yui3-menu-label-menuvisible {
+
+    border-color: #7D98B8;
+    background-color: #F4F2F1;
+    /*background: url(assets/yui_sprite.png) repeat-x 0 -1700px;*/
+
+
+}
+
+.hornet-skin-francediplo .yui3-menubuttonnav .yui3-menu-label-active,
+.hornet-skin-francediplo .yui3-menubuttonnav .yui3-menuitem-active .yui3-menuitem-content,
+.hornet-skin-francediplo .yui3-menubuttonnav .yui3-menu-label-menuvisible,
+.hornet-skin-francediplo .yui3-splitbuttonnav .yui3-menu-label-active,
+.hornet-skin-francediplo .yui3-splitbuttonnav .yui3-menuitem-active .yui3-menuitem-content,
+.hornet-skin-francediplo .yui3-splitbuttonnav .yui3-menu-label-menuvisible {
+
+    border-left-width: 1px;
+    margin-left: -1px;
+
+}
+
+.hornet-skin-francediplo .yui3-splitbuttonnav .yui3-menu-label-menuvisible {
+
+    border-color: #808080;
+    background: transparent;
+
+}
+
+.hornet-skin-francediplo .yui3-splitbuttonnav .yui3-menu-label-menuvisible .yui3-menu-toggle {
+
+    border-color: #7D98B8;
+    background: url(assets/yui_horizontal-menu-submenu-toggle.png) left center no-repeat;
+
+}
+/* items niveaux 2 et 3 */
+.hornet-skin-francediplo .yui3-menu .yui3-menu .yui3-menu-label,
+.hornet-skin-francediplo .yui3-menu .yui3-menu .yui3-menuitem-content {
+    color: #000000;
+}
+
+.hornet-skin-francediplo .yui3-menu-horizontal .yui3-menu-content .yui3-menuitem-active .yui3-menuitem-content {
+    color: #000000;
+    text-decoration: underline; 
+}
+
+/* item actif (survol�/focus) niveau 1 parent */ 
+.hornet-skin-francediplo .yui3-menu-horizontal .yui3-menu-content .yui3-menu-label-active,
+.hornet-skin-francediplo .yui3-menu-horizontal .yui3-menu-content .yui3-menu-label-menuvisible {
+    color: #000000;          
+}
+
+.hornet-skin-francediplo .yui3-menubuttonnav .yui3-menu-label-active em,
+.hornet-skin-francediplo .yui3-menubuttonnav .yui3-menu-label-menuvisible em {
+    background: url(assets/horizontal-menu-submenu-indicator-hover.png) right center no-repeat;
+}
+
+.hornet-skin-francediplo .yui3-menubuttonnav > div > ul > li > a {
+    font-family: MerriweatherBold,Georgia,serif;
+}
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
+.hornet-skin-francediplo .yui-pg-container {
+    display: block;
+    margin: 0;
+    padding: 2px;
+    border:1px solid #ccc;
+    border-top:0;
+    background:url(assets/sprite-global.png) repeat-x 0 -610px;
+    white-space: nowrap;
+    text-align:center;
+}
+.hornet-skin-francediplo .yui-pg-first,
+.hornet-skin-francediplo .yui-pg-previous,
+.hornet-skin-francediplo .yui-pg-next,
+.hornet-skin-francediplo .yui-pg-last,
+.hornet-skin-francediplo .yui-pg-current,
+.hornet-skin-francediplo .yui-pg-pages,
+.hornet-skin-francediplo .yui-pg-page {
+    display: inline-block;
+    font-family: arial,helvetica,clean,sans-serif;
+    padding: 3px 6px;
+    zoom:1;
+}
+.hornet-skin-francediplo .yui-pg-pages {
+    padding: 0;
+}
+.hornet-skin-francediplo .yui-pg-current {
+    padding: 3px 0;
+}
+.hornet-skin-francediplo a.yui-pg-first:link,      .hornet-skin-francediplo a.yui-pg-first:visited,
+.hornet-skin-francediplo a.yui-pg-first:active,    .hornet-skin-francediplo a.yui-pg-first:hover,
+.hornet-skin-francediplo a.yui-pg-previous:link,   .hornet-skin-francediplo a.yui-pg-previous:visited,
+.hornet-skin-francediplo a.yui-pg-previous:active, .hornet-skin-francediplo a.yui-pg-previous:hover,
+.hornet-skin-francediplo a.yui-pg-next:link,       .hornet-skin-francediplo a.yui-pg-next:visited,
+.hornet-skin-francediplo a.yui-pg-next:active,     .hornet-skin-francediplo a.yui-pg-next:hover,
+.hornet-skin-francediplo a.yui-pg-last:link,       .hornet-skin-francediplo a.yui-pg-last:visited,
+.hornet-skin-francediplo a.yui-pg-last:active,     .hornet-skin-francediplo a.yui-pg-last:hover,
+.hornet-skin-francediplo a.yui-pg-page:link,       .hornet-skin-francediplo a.yui-pg-page:visited,
+.hornet-skin-francediplo a.yui-pg-page:active,     .hornet-skin-francediplo a.yui-pg-page:hover {
+    color: #336699;
+    text-decoration: underline;
+}
+.hornet-skin-francediplo a.yui-pg-first:hover,
+.hornet-skin-francediplo a.yui-pg-previous:hover,
+.hornet-skin-francediplo a.yui-pg-next:hover,
+.hornet-skin-francediplo a.yui-pg-last:hover,
+.hornet-skin-francediplo a.yui-pg-page:hover {
+    color: #000;
+}
+.hornet-skin-francediplo span.yui-pg-first,
+.hornet-skin-francediplo span.yui-pg-previous,
+.hornet-skin-francediplo span.yui-pg-next,
+.hornet-skin-francediplo span.yui-pg-last {
+    color: #336699;
+}
+.hornet-skin-francediplo .yui-pg-page {
+    text-decoration: underline;
+}
+.hornet-skin-francediplo .yui-pg-current-page {
+    text-decoration: none;
+    font-weight: bold;
+}
+.hornet-skin-francediplo .yui-pg-page {
+    margin-left: 1px;
+    margin-right: 1px;
+}
+.hornet-skin-francediplo .yui-pg-first,
+.hornet-skin-francediplo .yui-pg-previous {
+    padding-left: 0;
+}
+.hornet-skin-francediplo .yui-pg-next,
+.hornet-skin-francediplo .yui-pg-last {
+    padding-right: 0;
+}
+.hornet-skin-francediplo .yui-pg-current,
+.hornet-skin-francediplo .yui-pg-rpp-options {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.hornet-skin-francediplo .outils .yui-pg-container {
+    background: transparent;
+    border: 0;
+    display: inline-block;
+    padding: 3px 6px 6px 6px;
+    float: right;
+    margin-right: 40%;
+}
+
+.yui3-rattachement .yui3-rattachement-content {
+    white-space: nowrap;
+    padding: 10px;
+}
+.yui3-rattachement .yui3-rattachement-panel {
+    display: inline-block;
+    text-align: justify;
+    vertical-align: middle;
+    white-space: normal;
+    width: 33.33333%;
+}
+.yui3-rattachement .yui3-rattachement-label {
+    display: block;
+    text-align: center;
+}
+.yui3-rattachement .yui3-rattachement-data {
+    width: 100%;
+}
+.yui3-rattachement .yui3-rattachement-actions .yui3-rattachement-action-button {
+    display: block;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 1em;
+}
+/* YUI 3.8.1 (build 5795) Copyright 2013 Yahoo! Inc. http://yuilibrary.com/license/ */
+.yui3-tab-panel {
+    display:none;
+}
+
+.yui3-tab-panel-selected {
+    display:block;
+}
+
+.yui3-tabview-list,
+.yui3-tab {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.yui3-tabview {
+    position:relative; /* contain absolute positioned tabs (left/right) */
+}
+
+.yui3-tabview,
+.yui3-tabview-list,
+.yui3-tabview-panel,
+.yui3-tab,
+.yui3-tab-panel { /* IE: kill space between horizontal tabs */
+    zoom:1;
+}
+
+.yui3-tab {
+    display:inline-block;
+    *display:inline; /* IE */
+    vertical-align:bottom; /* safari: for overlap */
+    cursor:pointer;
+}
+
+.yui3-tab-label {
+    display:block;
+    display:inline-block;
+    padding: 6px 10px;
+    position:relative; /* IE: to allow overlap */
+    text-decoration: none;
+    vertical-align:bottom; /* safari: for overlap */
+}
+/* .yui-navset defaults to .yui-navset-top */
+.hornet-skin-francediplo .yui3-tabview-list {
+    border:solid #2647a0; /* color between tab list and content */
+    border-width:0 0 0px;
+    zoom:1;
+}
+
+.hornet-skin-francediplo .yui3-tab {
+    margin:0 0.2em 0 0;
+    padding:1px 0 0; /* gecko: make room for overflow */
+    zoom:1;
+}
+
+.hornet-skin-francediplo .yui3-tab-selected {
+    margin-bottom:-1px; /* for overlap (mapped to tabview-list border-width) */
+}
+
+.hornet-skin-francediplo .yui3-tab-label {
+    background:#F4F2F1; /* tab background */
+    border:solid #F4F2F1;
+    border-width: 1px 1px 0 1px;
+    color:#000;
+    cursor:pointer;
+    font-size:100%;
+    padding:0.3em .75em;
+    text-decoration:none;
+}
+
+.hornet-skin-francediplo .yui3-tab-label:hover,
+.hornet-skin-francediplo .yui3-tab-label:focus {
+    background:#bfdaff url(assets/sprite.png) repeat-x left -1300px; /* hovered tab background */
+    outline:0;
+}
+
+.hornet-skin-francediplo .yui3-tab-selected .yui3-tab-label,
+.hornet-skin-francediplo .yui3-tab-selected .yui3-tab-label:focus,
+.hornet-skin-francediplo .yui3-tab-selected .yui3-tab-label:hover { /* no hover effect for selected */
+    background:#336699; /* selected tab background */
+    color:#fff;
+}
+
+.hornet-skin-francediplo .yui3-tab-selected .yui3-tab-label {
+    padding:0.4em 0.75em; /* raise selected tab */
+}
+
+.hornet-skin-francediplo .yui3-tab-selected .yui3-tab-label {
+    border-color:#243356; /* selected tab border color */
+}
+
+.hornet-skin-francediplo .yui3-tabview-panel {
+    background:#fff; /* content background color */
+}
+
+.hornet-skin-francediplo .yui3-tabview-panel {
+    border:1px solid #CCC; /* content border */
+    border-top-color:#000; /* different border color */
+    padding:1em; /* content padding */
+}
+.hornet-skin-francediplo .yui3-tab-label {
+    font-weight: bold;
+}
+
+.hornet-skin-francediplo ul.yui3-tabview-list > li.yui3-tab {
+    margin-left: 15px;
+}
+
+.yui3-tabview .yui3-tab-panel > .hornet-tabview-title-hidden
+{
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}

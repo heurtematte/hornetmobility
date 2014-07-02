@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="ville">
+
+    <resultMap class="fr.gouv.diplomatie.applitutoriel.business.bo.Ville" id="mapVille">
+        <result column="ID_VILLE" property="id" />
+        <result column="VIL_LIBELLE" property="libelle" />
+        <result column="ID_PAYS" property="pays" resultMap="pays.mapPays" />
+    </resultMap>
+
+    <sql id="select_fragment">
+        SELECT ID_VILLE, VIL_LIBELLE
+        , PAYS.ID_PAYS AS ID_PAYS, PAY_LIBELLE, PAY_NATIONALITE
+        FROM VILLE
+            JOIN PAYS ON VILLE.ID_PAYS = PAYS.ID_PAYS
+    </sql>
+
+    <sql id="orderByLibelle_fragment">
+        ORDER BY VIL_LIBELLE ASC;
+    </sql>
+
+    <select id="select" resultMap="mapVille">
+        <include refid="select_fragment" />
+        <include refid="orderByLibelle_fragment" />
+    </select>
+
+    <select id="selectByIdVille" resultMap="mapVille">
+        <include refid="select_fragment" />
+        WHERE ID_VILLE = #id#
+        <include refid="orderByLibelle_fragment" />
+    </select>
+
+    <select id="selectByIdPays" resultMap="mapVille">
+        <include refid="select_fragment" />
+        WHERE ID_PAYS = #idPays#
+        <include refid="orderByLibelle_fragment" />
+    </select>
+</sqlMap>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="civiliteDAO" class="fr.gouv.diplomatie.applitutoriel.integration.dao.CiviliteDAO">
+        <property name="dataSource" ref="dataSource" />
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
+    
+    <bean id="partenaireDAO" class="fr.gouv.diplomatie.applitutoriel.integration.dao.PartenaireDAO">
+        <property name="dataSource" ref="dataSource" />
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
+    
+    <bean id="paysDAO" class="fr.gouv.diplomatie.applitutoriel.integration.dao.PaysDAO">
+        <property name="dataSource" ref="dataSource" />
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
+    
+    <bean id="produitDAO" class="fr.gouv.diplomatie.applitutoriel.integration.dao.ProduitDAO">
+        <property name="dataSource" ref="dataSource" />
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
+    
+    <bean id="secteurDAO" class="fr.gouv.diplomatie.applitutoriel.integration.dao.SecteurDAO">
+        <property name="dataSource" ref="dataSource" />
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
+    
+    <bean id="utilisateurDAO" class="fr.gouv.diplomatie.applitutoriel.integration.dao.UtilisateurDAO">
+        <property name="dataSource" ref="dataSource" />
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
+    
+    <bean id="villeDAO" class="fr.gouv.diplomatie.applitutoriel.integration.dao.VilleDAO">
+        <property name="dataSource" ref="dataSource" />
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
+</beans>

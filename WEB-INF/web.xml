@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="AppliTutoriel" version="2.5"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<display-name>Hornet Mobility</display-name>
+
+	<context-param>
+        <param-name>version</param-name>
+        <param-value>3.3.0</param-value>
+    </context-param>
+    
+    <!-- Tiles -->
+    <context-param>
+        <param-name>org.apache.tiles.impl.BasicTilesContainer.DEFINITIONS_CONFIG</param-name>
+   		<param-value>/WEB-INF/classes/tiles.xml</param-value>
+   </context-param>
+
+    <!-- Nom JNDI de la variable contenant le chemin vers les properties -->
+    <context-param>
+        <param-name>appConfigLocation</param-name>
+        <param-value>conf/hornetmobilityprop</param-value>
+    </context-param>
+    
+    <listener>
+        <listener-class>hornet.framework.web.listener.DynamicLoaderListener</listener-class>
+    </listener>
+    
+    <!-- Propriétés du framework client Hornet -->
+    <!-- 
+    <context-param>
+        <param-name>fwkConfigFileName</param-name>
+        <param-value>hornet.properties</param-value>
+    </context-param>
+     -->
+    <listener>
+        <listener-class>hornet.framework.web.listener.HornetInitializationListener</listener-class>
+    </listener>
+
+    <!-- Fichiers Spring -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            classpath*:spring-security.xml
+            classpath*:spring-appContext.xml
+            classpath*:spring-appContext-datasource.xml
+            classpath*:spring-appContext-dao.xml
+        </param-value>
+    </context-param>
+
+    <!-- Spring Security localization filter -->
+	<filter>
+	    <filter-name>localizationFilter</filter-name>
+	    <filter-class>org.springframework.web.filter.RequestContextFilter</filter-class>
+	</filter>
+
+    <!-- Spring Security localization filter mapping-->
+	<filter-mapping>
+	    <filter-name>localizationFilter</filter-name>
+	    <url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+    <!-- Spring Security -->
+    <filter>
+	  <filter-name>springSecurityFilterChain</filter-name>
+	  <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	
+	<filter-mapping>
+	  <filter-name>springSecurityFilterChain</filter-name>
+	  <url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+    <!-- Struts 2 -->
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>
+				struts.xml
+			</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/dyn/*</url-pattern>
+	</filter-mapping>
+
+    <listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>org.apache.struts2.tiles.StrutsTilesListener</listener-class>
+	</listener>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<!--  localisation -->
+	<context-param>
+		<param-name>javax.servlet.jsp.jstl.fmt.fallbackLocale</param-name>
+		<param-value>fr</param-value>
+	</context-param>
+	<context-param>
+		<param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+		<param-value>package</param-value>
+	</context-param>
+	
+</web-app>

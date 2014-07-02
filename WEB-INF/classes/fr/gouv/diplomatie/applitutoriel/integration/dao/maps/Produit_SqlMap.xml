@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="produit">
+
+    <resultMap class="fr.gouv.diplomatie.applitutoriel.business.bo.Produit" id="mapProduit">
+        <result column="ID_PRODUIT" property="id" />
+        <result column="PRO_NOM" property="nom" />
+        <result column="PRO_DESCR" property="desc" />
+        <result column="ID_SECTEUR" property="secteur" resultMap="secteur.mapSecteur" />
+    </resultMap>
+
+    <select id="select" resultMap="mapProduit">
+        SELECT PRODUIT.*, SECTEUR.*
+        FROM PRODUIT
+            INNER JOIN SECTEUR ON PRODUIT.ID_SECTEUR = SECTEUR.ID_SECTEUR
+        ORDER BY PRO_NOM ASC;
+    </select>
+    
+    <select id="selectByIdPartenaire" resultMap="mapProduit">
+        SELECT PRODUIT.*, SECTEUR.*
+        FROM PRODUIT
+	        INNER JOIN SECTEUR ON PRODUIT.ID_SECTEUR = SECTEUR.ID_SECTEUR
+	        INNER JOIN PRODUIT_PARTENAIRE ON PRODUIT_PARTENAIRE.ID_PRODUIT = PRODUIT.ID_PRODUIT
+        WHERE PRODUIT_PARTENAIRE.ID_PARTENAIRE = #idPartenaire#
+        ORDER BY PRO_NOM ASC;
+    </select>
+    
+    <insert id="insertProduitPartenaire">
+        INSERT INTO PRODUIT_PARTENAIRE 
+        (
+            ID_PRODUIT, ID_PARTENAIRE
+        ) 
+        VALUES 
+        (
+            #idProduit#, #idPartenaire#
+        );
+    </insert>
+    
+    <delete id="deleteProduitPartenaire" parameterClass="fr.gouv.diplomatie.applitutoriel.business.bo.Partenaire" >
+        DELETE FROM PRODUIT_PARTENAIRE WHERE ID_PARTENAIRE = #id#
+    </delete>
+</sqlMap>

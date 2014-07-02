@@ -1,0 +1,238 @@
+@media ( max-width :979px) {
+	/* Entete */
+	#hd #bandeau_appli {
+		margin-bottom: 2em;
+		text-align: center;
+	}
+	#hd #bandeau_appli #infos {
+		color: black;
+		margin-top: -2.2em;
+	}
+	#hd #bandeau_appli h1 {
+		padding: 0;
+	}
+	#hd #bandeau_appli a h1  img {
+		background-color: transparent;
+		height: 1.5em;
+		padding: 0.3em;
+		left: 1em;
+	}
+	#hd #logo_appli {
+		float: none;
+		width: auto;
+	}
+	#links li,#access_liens li {
+		padding: 0 0 0 2em;
+	}
+
+	/* Menu */
+	#nav {
+		position: absolute;
+		top: 3em;
+		width: 100%;
+	}
+	#cssmenu-container {
+		float: right;
+		padding: 3em 0 0 0;
+	}
+	#cssmenu {
+		color: white;
+		margin: 0;
+		padding: 0;
+		font-weight: normal;
+		margin-left: 5em;
+	}
+	
+	
+	#cssmenu .menu-racine {
+		display: block;
+		font-size: 1.5em;
+		padding: 0.2em;
+		margin: 0 0.5em 0 0.5em;
+		-webkit-border-radius: .2em;
+		-moz-border-radius:  .2em;
+		border-radius:  .2em;
+		border: thin solid #336699;
+		color: #336699;
+		text-align: right;
+		width: auto;
+		float: right;
+	}
+	#cssmenu ul {
+		display: none;
+	}
+	#cssmenu li {
+		float: none;
+	}
+	#cssmenu li span,#cssmenu ul ul span{
+		color: #666666;
+	}
+	#cssmenu li a,#cssmenu ul ul a {
+		color: #222222;
+	}
+	#cssmenu li a,#cssmenu ul ul a,#cssmenu ul ul span {
+		line-height: 3em;
+		font-size: 1.5em;
+	}
+	
+	#cssmenu li span{
+		line-height: 3em;
+	}
+	#cssmenu.active>ul {
+		display: block;
+		left: 0;
+	    position: absolute;
+	    top: 7.5em;
+	    width: 100%;
+	    z-index: 10;
+	}
+	#cssmenu li ul {
+		display: block;
+	}
+	
+	
+	#cssmenu li a,#cssmenu li span {
+		display: block;
+	}
+	#cssmenu li a.logout span{
+		color: #222222;
+		display: inline;
+	}
+	#cssmenu li a.logout span.btn-deconnexion{
+		display: none;
+		color: #222222;
+	}
+	
+	.nivMenu0,.nivMenu1,.nivMenu2, .logout {
+		border: #cdcdcd 1px solid;
+	}
+	.nivMenu0, .logout {
+		background: #ffffff;
+		padding: 0 .5em;
+		margin: 0;
+	}
+	.nivMenu1 {
+		background: #eeeeee;
+		padding: 0 1em;
+	}
+	.nivMenu2 {
+		background: #ddd;
+		padding: 0 1.5em;
+	}
+	.nivMenu3 {
+		color: #FFFFFF;
+		background: #8eb3dd;
+		padding: 0 2em;
+	}
+	.nivMenu4 {
+		color: #FFFFFF;
+		background: #90b5df;
+		padding: 0 2.5em;
+	}
+	.last {
+		background: none;
+	}
+	
+	
+	#cssmenu li span {
+		display: block;
+	}
+	
+	
+	#cssmenu .has-sub img {
+		margin-left: 0.5em;
+	}
+
+	/* Contenu */
+	#bd {
+		margin-top: -1em;
+	}
+	.errorBox>div {
+		background: none;
+	}
+
+	/* Pied de page */
+	div.pied_content {
+		text-align: center;
+	}
+	div.pied_haut {
+		width: auto;
+	}
+	.pied_haut_lien {
+		width: 100%;
+	}
+	div.pied_bas {
+		text-align: center;
+		width: 100%;
+	}
+	.pied_content h2 {
+		background-color: #F4F2F1;
+		border: 1px solid #CCCCCC;
+		cursor: pointer;
+		padding: 0.7em;
+		margin: 0.5em;
+	}
+	.pied_content h2:hover,.pied_content .menu-trigger-show.active h2 {
+		background-color: #336699;
+		color: #FFFFFF;
+	}
+	.pied_content ul {
+		margin: 0;
+	}
+	.menu-trigger-show>.menu-target-show {
+		display: none;
+	}
+	.menu-trigger-show.active>.menu-target-show {
+		display: block;
+		position: relative;
+		z-index: 2;
+	}
+	dl.pied_haut_lien {
+		background-color: #F4F2F1;
+		margin: 0.5em;
+	}
+	dl.pied_haut_lien dd,dl.interministeriel dd {
+		display: list-item;
+		margin: 0;
+		padding: 1em;
+		width: auto;
+	}
+	dl.interministeriel {
+		margin-top: 0;
+	}
+	dl.pied_haut_lien dd:before {
+		content: "";
+	}
+	dl.interministeriel {
+		border-top: none;
+	}
+	
+	/*Langues*/
+	
+	#pied_langues {
+		background-color: #F4F2F1;
+	}
+	#pied_langues li {
+		padding: 1em;
+	}
+	
+	/* Réseaux sociaux */
+	
+	.reseau_social {
+		margin: .2em;
+	}
+	
+	#reseaux_sociaux {
+		background-color: #F4F2F1;
+	}
+		
+}
+
+@media ( min-width :768px) and (max-width:979px) {
+	body {
+		
+	}
+	input[type="text"],input[type="password"],textarea,select {
+		max-width: 100%;
+	}
+}

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+Configuration Spring pour la Sécurité.
+-->
+<beans xmlns:sec="http://www.springframework.org/schema/security"
+  xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+    <!-- Properties CAS -->
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:cas.properties</value>
+            </list>
+        </property>
+        <property name="placeholderPrefix" value="$securityCas{" />
+    </bean>
+
+    <!-- Messages pour Erreur Spring Security-->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>org/springframework/security/messages</value>
+            </list>
+        </property>
+    </bean>	
+    
+    <!-- Configuration CAS : Service CAS à concevoir en accord avec le contrat de Spring Security 
+    <bean id="casUserDetailService" class="some.package.application.security.CasUserDetailService"/>
+
+    <bean id="serviceProperties" class="org.springframework.security.cas.ServiceProperties">
+        <property name="service" value="$securityCas{cas.securityCheckUrl}"/>
+        <property name="sendRenew" value="false"/>
+    </bean>
+    <bean id="casEntryPoint" class="org.springframework.security.cas.web.CasAuthenticationEntryPoint">
+		<property name="loginUrl" value="$securityCas{cas.loginUrl}" />
+		<property name="serviceProperties" ref="serviceProperties" />
+	</bean>
+	<bean id="casAuthenticationFilter" class="org.springframework.security.cas.web.CasAuthenticationFilter">
+		<property name="authenticationManager" ref="authenticationManager"/>
+	</bean>
+	<bean id="casAuthenticationProvider" class="org.springframework.security.cas.authentication.CasAuthenticationProvider">
+		<property name="userDetailsService" ref="casUserDetailService" />
+		<property name="serviceProperties" ref="serviceProperties" />
+		<property name="ticketValidator">
+			<bean class="org.jasig.cas.client.validation.Cas20ServiceTicketValidator">
+				<constructor-arg index="0" value="$securityCas{cas.ticketValidationUrl}" />
+			</bean>
+		</property>
+		<property name="key" value="applituto"/>
+	</bean>
+    -->
+
+    <!-- Filtre invoqué à la déconnexion 
+    <bean id="logoutFilter" class="org.springframework.security.web.authentication.logout.LogoutFilter">
+        ==== Url de redirection après déconnexion ====
+        <constructor-arg value="$securityCas{cas.logoutUrl}" index="0"/>
+        <constructor-arg  index="1">
+            <list>
+                <bean class="org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler">
+                    <property name="invalidateHttpSession" value="false"/>
+                </bean>
+            </list>
+        </constructor-arg>
+        <property name="filterProcessesUrl" value="/j_spring_cas_security_logout"/>
+    </bean>
+    -->
+
+    <!-- Activation des annotations @Secured pour la couche service -->
+    <sec:global-method-security secured-annotations="enabled" />
+
+    <!-- Définition des différents authentication manager -->
+	<sec:authentication-manager  alias="authenticationManager">
+	
+	    <!-- Configuration CAS : CAS 
+        <sec:authentication-provider ref="casAuthenticationProvider" />
+	    -->
+        
+	    <!-- Configuration Local -->
+        <!-- <sec:authentication-provider>-->
+		     <!-- Pour coder les mots de passe, décommenter la ligne suivante -->
+		     <!-- <sec:password-encoder hash="sha"/> -->
+		     
+		     <!-- Il est également possible de déclarer les utilisateurs dans un
+		          fichier properties : 
+		          <user-service properties="users.properties" /> -->
+		<!-- <sec:user-service id="userService">
+                <sec:user name="admin" password="admin" authorities="ROLE_AppliTuto_USER,ROLE_AppliTuto_ADMIN" />
+                <sec:user name="user" password="user" authorities="ROLE_AppliTuto_USER" />
+                <sec:user name="userlocal" password="userlocal" authorities="ROLE_AppliTuto_USER" />
+            </sec:user-service>
+        </sec:authentication-provider> -->
+
+		<!-- Configuration : En base de donnée HSQLDB (cf initData.sql) -->
+        <sec:authentication-provider>
+            <sec:password-encoder hash="sha"/>
+            <sec:jdbc-user-service  data-source-ref="dataSource"
+                 authorities-by-username-query="SELECT UTI_LOGIN AS LOGIN, ROL_NOM AS ROLE FROM UTILISATEUR JOIN ROLE_UTILISATEUR ON UTILISATEUR.ID_UTILISATEUR = ROLE_UTILISATEUR.ID_UTILISATEUR JOIN ROLE ON ROLE_UTILISATEUR.ID_ROLE = ROLE.ID_ROLE WHERE UTI_LOGIN = ?"
+                 users-by-username-query="SELECT UTI_LOGIN AS LOGIN, UTI_PASSWORD AS PASSWORD, UTI_ENABLED AS ENABLED FROM UTILISATEUR WHERE UTI_LOGIN = ?" 
+                 role-prefix="ROLE_"/>
+        </sec:authentication-provider> 
+
+	</sec:authentication-manager>
+
+    <!-- Configuration CAS : Filtrage CAS 
+    <sec:http entry-point-ref="casEntryPoint" use-expressions="true">
+        <sec:custom-filter ref="casAuthenticationFilter" position="CAS_FILTER" />
+        <sec:custom-filter ref="logoutFilter" position="LOGOUT_FILTER"/>
+        <sec:intercept-url pattern="/dyn/protected/administration/**" access="hasAnyRole('ROLE_AppliTuto_ADMIN')" />
+        <sec:intercept-url pattern="/dyn/protected/partenaire/initAjoutPartenaire.html" access="hasRole('ROLE_AppliTuto_ADMIN')" />
+        <sec:intercept-url pattern="/dyn/protected/**" access="hasAnyRole('ROLE_AppliTuto_USER','ROLE_AppliTuto_ADMIN')" />
+    </sec:http>
+    -->
+
+    <!-- Configuration HTTP -->
+    <sec:http pattern="/authentification/**" security="none"/>
+    <sec:http pattern="/static-1.2.0/auth/**" security="none"/>
+    
+    <sec:http auto-config="true" use-expressions="true">
+       <sec:form-login login-page="/authentification/login.jsp"
+                   authentication-failure-url="/authentification/login.jsp?erreur=true" />
+       <sec:intercept-url pattern="/dyn/protected/administration/**" access="hasRole('ROLE_AppliTuto_ADMIN')" />
+       <sec:intercept-url pattern="/dyn/protected/partenaire/initAjoutPartenaire.html" access="hasRole('ROLE_AppliTuto_ADMIN')" />
+       <sec:intercept-url pattern="/dyn/protected/**" access="hasAnyRole('ROLE_AppliTuto_USER','ROLE_AppliTuto_ADMIN')" />
+	</sec:http>
+</beans>

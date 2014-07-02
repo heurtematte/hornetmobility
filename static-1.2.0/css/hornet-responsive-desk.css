@@ -1,0 +1,111 @@
+@media ( min-width :980px) {
+	#nav {
+		border-bottom: 1px solid #dedede;
+		height: 4em;
+	}
+
+	/* Menu */
+	#cssmenu ul{
+		background: #FFFFFF;
+		height: 2em;
+		padding-bottom: 1em;
+	}
+	#cssmenu ul li a img, #cssmenu ul li span img {
+		box-shadow: 1px 0px 0 #dedede inset;
+		background: #e9e9e9;
+		padding: 1.1em;
+		float: right;
+		margin-left: .5em;
+	}
+	li#logoutmenu img {
+		display: none;
+	}
+	#cssmenu li.last,#cssmenu li#logoutmenu {
+		padding-bottom: 0.3em;
+	}
+	
+	#cssmenu li#logoutmenu {
+		float: right;
+	}
+	#cssmenu li.last a,#cssmenu li.last span,#cssmenu li#logoutmenu a {
+		padding: 0 1em;
+	}
+	
+	#cssmenu li#logoutmenu a span{
+		padding: 0 0em;
+	}
+	
+	#cssmenu li.has-sub a, #cssmenu li.has-sub span {
+		padding: 0 0 0 1em;
+	}
+	#cssmenu ul li,#logout-container ul li {
+		background: #ffffff;
+		border: 1px solid #e9e9e9;
+		margin: 0 1em;
+	}
+	#cssmenu li.has-sub ul li {
+		margin: 0;
+	}
+	#cssmenu li ul {
+		display: none;
+		height: auto;
+		position: absolute;
+		width: 225px;
+		z-index: 200;
+	}
+	#cssmenu ul ul {
+		background: none;
+		padding-top: 0.2em;
+	}
+	#cssmenu ul ul ul {
+		padding-top: 0em;
+	}
+	#cssmenu li li {
+		width: 225px;
+	}
+	#cssmenu li a,#cssmenu li span {
+		color: #666666;
+		text-align: center;
+		padding: 0;
+	}
+	#cssmenu li ul a:hover {
+		color: #000000;
+	}
+
+	/*Déconnexion*/
+	#cssmenu li.logout {
+		padding: 0 1em;
+		float: right;
+		line-height: 30px;
+		padding-bottom: 0.2em;
+	}
+	#cssmenu .lien-deconnexion {
+		font-size: 0.7em;
+		font-weight: normal;
+	}
+
+	#cssmenu .btn-deconnexion {
+		display: none;
+	}
+
+	/*Fil d'ariane*/
+	#fil-ariane li.fil-ariane-racine {
+		margin: 0;
+		padding-left: 0;
+	}
+	#fil-ariane span {
+		padding: 0;
+	}
+
+	/* Form & champs */
+	label,.label,input[type="checkbox"],input[type="radio"],input[type="text"],input[type="password"],textarea,select {
+		margin-left: 0.5em;
+	}
+	input[type="text"],input[type="password"],textarea,select {
+		max-width: 100%;
+	}
+	input[type="text"],input[type="password"],select {
+		height: 1.8em;
+		max-width: 100%;
+	}
+}

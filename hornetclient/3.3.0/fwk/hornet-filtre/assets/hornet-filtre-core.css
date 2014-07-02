@@ -1,0 +1,13 @@
+.yui3-js-enabled .yui3-filtre-loading {
+   display: none;
+}
+
+/* Hide by positioning off-screen */
+.yui3-filtre-hidden {
+    position:absolute;
+    left:-10000px;
+    top:-10000em;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}

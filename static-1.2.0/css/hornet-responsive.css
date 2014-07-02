@@ -1,0 +1,180 @@
+
+#site {
+	max-width: 83.334em;
+	width: auto !important;
+}
+
+#bd {
+	clear: both;
+}
+
+/* Entete */
+#bandeau_appli h1 a img {
+	height: 3em;
+}
+
+#logo_appli h1 {
+}
+
+ #infos {
+	padding: 0;
+	position: fixed;
+	bottom: 0;
+	width: 55.556em;
+	background-color: #CDCDCD;
+	font-size: 1.5em;
+	z-index: 100;
+}
+
+#infos>div {
+	padding: .3em;
+	float: right;
+}
+
+#infos a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#access_liens .mobile {
+	display: none;
+}
+
+#header {
+	height: 3em;
+}
+
+/* Menu */
+
+#logout-container {
+	float: right;
+}
+
+#cssmenu-container ul,#logout-container ul {
+	margin: 0;
+	list-style: none;
+}
+
+#cssmenu>span {
+	display: none;
+}
+
+#cssmenu {
+	border: none;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	font-family: verdana, geneva, arial, helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #8e8e8e;
+	width: auto;
+}
+
+#logoutmenu {
+	border: none;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	font-family: verdana, geneva, arial, helvetica, sans-serif;
+	font-weight: bold;
+	color: #8e8e8e;
+	width: auto;
+}
+
+#cssmenu>ul,#logout-container>ul {
+	margin-top: 6px !important;
+}
+
+#cssmenu ul,#logout-container ul {
+	background-color: white list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#cssmenu ul ul {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+#cssmenu ul ul ul {
+	left: 100%;
+	top: 0%;
+}
+
+#cssmenu li,#logout-container li {
+	float: left;
+	padding: 0px;
+}
+
+#cssmenu li a,#logout-container li a,#cssmenu li span,#logout-container li span {
+/* 	display: block; */
+	font-weight: bold;
+	line-height: 30px;
+	text-decoration: none;
+}
+
+#cssmenu li a:hover {
+	color: #000000;
+	text-decoration: none;
+}
+
+#cssmenu li ul {
+	display: none;
+	height: auto;
+}
+
+#cssmenu li:hover>ul,#cssmenu li.active>ul {
+	display: block;
+}
+
+#cssmenu li li {
+	display: block;
+	float: none;
+	padding: 0px;
+	position: relative;
+}
+
+#cssmenu li ul a,#cssmenu li ul span {
+	display: block;
+	font-size: 12px;
+	font-style: normal;
+	text-align: left;
+}
+
+#cssmenu p {
+	clear: left;
+}
+
+#cssmenu .active>a,#cssmenu .active>span {
+	background: #5982b8;
+	box-shadow: 0px 1px 0 #dedede;
+	color: #ffffff;
+}
+
+#cssmenu .active>a:hover {
+	color: white;
+}
+
+.menu-mask {
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+}
+
+/* Fil d'Ariane */
+#path span {
+	display: block;
+	float: left;
+	white-space: nowrap;
+}
+
+/* Contenu */
+#main {
+	clear: both;
+}

@@ -1,0 +1,139 @@
+#hd #bandeau_appli {
+	background-color: transparent;
+}
+
+#hd #logo_appli {
+	background: url("../images/bandeau.jpg") no-repeat;
+	background-size: 100% 100%;
+	padding: .5em 1em;
+	border : 2px solid #CBD9F3;
+	-webkit-border-bottom-right-radius: .5em;
+	-webkit-border-bottom-left-radius: .5em;
+	-moz-border-radius-bottomright: .5em;
+	-moz-border-radius-bottomleft: .5em;
+	border-bottom-right-radius: .5em;
+	border-bottom-left-radius: .5em;
+}
+
+#hd #bandeau_appli a h1 {
+	padding: .8em;
+	white-space: nowrap;
+}
+
+#hd #bandeau_appli a {
+	line-height: 5.3em;
+	text-decoration: none;
+	color: #336699;
+}
+
+#hd #bandeau_appli a img {
+	background-color:none;
+	height: 6em;
+	margin: .5em;
+	padding: .3em;
+	left: 2em;
+	float: left;
+}
+
+#hd #bandeau_appli h1 {
+	font-size: 1.5em;
+}
+
+#hd #bandeau_appli #infos {
+	float: right;
+}
+
+#hd #access_liens,#hd #links {
+	background-color: transparent;
+	float: left;
+	padding: 2px 2px 2px 0;
+}
+
+#hd #links {
+	margin-right: 1em;
+}
+
+#links li,#access_liens li {
+	border: none;
+	padding: 0 0 0 1em;
+}
+
+#hd #access_liens a,#hd #links  a {
+	color: inherit;
+	font-size: 1em;
+	padding: 0 3px;
+}
+
+.logout-container {
+	text-align: right;
+}
+
+#main {
+	margin: 1em;
+}
+
+/** Fil d'Ariane */
+/** reset */
+ul#fil-ariane {
+	padding: 0;
+	list-style: none;
+}
+#path span {
+	background: none;
+}
+
+#fil-ariane {
+	overflow: hidden;
+	width: 100%;
+	font-size: 90%;
+}
+
+#fil-ariane li {
+	float: left;
+	margin: 0 0 0 1em;
+	/* utilser l'image du framework lors du rapatriement du RWD dans le fmk */
+	background: url("../images/charte/Chevron.gif") no-repeat scroll 100% 50% rgba(0, 0, 0, 0);
+	background-position: 0 0.32em;
+	padding-left: 1em;
+	line-height: 2.3em;
+}
+
+#fil-ariane li.fil-ariane-racine {
+	background: none;
+	margin-left: 0;
+}
+
+#fil-ariane span.fil-ariane-chevron {
+	position: absolute;
+	left: -10000px
+}
+
+#fil-ariane span {
+	font-size: 100%;
+}
+
+#path span {
+    padding: 0;
+}
+
+/** Pied de page */
+.pied_content ul {
+	list-style-type: none;
+	margin: 0;
+}
+
+.pied_haut_lien {
+	margin: 0;
+	width: 50%;
+	float: left;
+}
+
+div.pied_bas {
+	width: 50%;
+	float: left;
+}
+
+.interministeriel {
+	float: left;
+	width: 100%;
+}

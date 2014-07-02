@@ -1,0 +1,41 @@
+<xs:schema attributeFormDefault="unqualified"
+	elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="menu-item" type="menuItemType"></xs:element>
+    
+	<xs:complexType name="menuItemType">
+	    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="menu-item" type="menuItemType"></xs:element>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="id" use="required" />
+		<xs:attribute type="xs:string" name="href" use="optional" />
+		<xs:attribute type="xs:string" name="visibleDansMenu" use="optional" />
+		<xs:attribute type="xs:string" name="visibleDansPlan" use="optional" />
+		<xs:attribute type="xs:string" name="visibleDansFilAriane" use="optional" />
+		<xs:attribute type="xs:string" name="rolesAutorises" use="optional" />
+	</xs:complexType>
+
+	<xs:element name="pagelet">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="root">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute type="xs:string" name="id" />
+								<xs:attribute type="xs:string" name="href" />
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="menu">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="menu-item" maxOccurs="unbounded" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

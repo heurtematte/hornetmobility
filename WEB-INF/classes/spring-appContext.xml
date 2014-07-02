@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+Configuration Spring pour la couche metier.
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="mailPropertyConfigurer"
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:mail.properties" />
+        <property name="placeholderPrefix" value="$mail{" />
+    </bean>
+    
+       <!-- Service Mail Contact-->
+    <bean id="mailContactService" class="fr.gouv.diplomatie.applitutoriel.business.service.MailContactServiceImpl">
+        <constructor-arg ref="mailSender" index="0" />
+        <constructor-arg value="$mail{mail.contact.object}" index="1" />
+        <constructor-arg value="$mail{mail.contact.to}" index="2" />
+    </bean>
+    
+        <!-- Class utiliser pour envoyer les mails -->
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="$mail{mail.smtp.host}" />
+        <property name="username" value="$mail{mail.smtp.username}" />
+        <property name="password" value="$mail{mail.smtp.password}" />
+    </bean>
+     
+    <bean id="menuPreparer" class="fr.gouv.diplomatie.applitutoriel.web.action.frameset.MenuViewPreparer">
+    </bean>
+    
+	<!-- ========================= COUCHE BUSINESS ========================= -->
+
+    <bean id="civiliteService"
+        class="fr.gouv.diplomatie.applitutoriel.business.service.CiviliteServiceImpl">
+        <constructor-arg ref="civiliteDAO" index="0"/>
+    </bean>
+
+    <bean id="partenaireService"
+        class="fr.gouv.diplomatie.applitutoriel.business.service.PartenaireServiceImpl">
+        <constructor-arg ref="partenaireDAO" index="0"/>
+        <constructor-arg ref="villeService" index="1"/>
+    </bean>
+
+    <bean id="paysService"
+        class="fr.gouv.diplomatie.applitutoriel.business.service.PaysServiceImpl">
+        <constructor-arg ref="paysDAO" index="0"/>
+    </bean>
+
+    <bean id="produitService"
+        class="fr.gouv.diplomatie.applitutoriel.business.service.ProduitServiceImpl">
+        <constructor-arg ref="produitDAO" index="0"/>
+    </bean>
+
+    <bean id="secteurService"
+        class="fr.gouv.diplomatie.applitutoriel.business.service.SecteurServiceImpl">
+        <constructor-arg ref="secteurDAO" index="0"/>
+    </bean>
+
+    <bean id="utilisateurService"
+        class="fr.gouv.diplomatie.applitutoriel.business.service.UtilisateurServiceMock">
+    </bean>
+
+    <bean id="villeService"
+        class="fr.gouv.diplomatie.applitutoriel.business.service.VilleServiceImpl">
+        <constructor-arg ref="villeDAO" index="0"/>
+    </bean>
+</beans>
