@@ -1,1 +1,0 @@
-YUI.add("lang/hornet-autocomplete",function(a){a.Intl.add("hornet-autocomplete","",{item_selected:"{item} selected.",items_available:"Suggestions are available. Use up and down arrows to select."});},"3.3.0");

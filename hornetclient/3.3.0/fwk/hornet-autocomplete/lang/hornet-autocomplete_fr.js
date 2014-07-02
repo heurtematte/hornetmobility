@@ -1,1 +1,0 @@
-YUI.add("lang/hornet-autocomplete_fr",function(a){a.Intl.add("hornet-autocomplete","fr",{item_selected:"{item} s\u00E9lectionn\u00E9(s).",items_available:"Des suggestions sont disponibles. Utiliser les fl\u00EAches haut et bas pour se d\u00E9placer dans la liste."});},"3.3.0");

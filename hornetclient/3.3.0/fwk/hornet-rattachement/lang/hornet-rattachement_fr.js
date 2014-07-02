@@ -1,1 +1,0 @@
-YUI.add("lang/hornet-rattachement_fr",function(a){a.Intl.add("hornet-rattachement","fr",{selectedLabel:"Liste s\u00E9lectionn\u00E9e",availableLabel:"Liste disponible",selectActionLabel:"S\u00E9lectionner",deselectActionLabel:"D\u00E9s\u00E9lectionner",selectAllActionLabel:"S\u00E9lectionner tout",deselectAllActionLabel:"D\u00E9s\u00E9lectionner tout"});},"3.3.0");
